@@ -1,0 +1,16 @@
+<div class="section">
+  <div class="page-width stack">
+    <h1>{{ 'templates.404.title' | t }}</h1>
+    <p>{{ 'templates.404.subtext' | t }}</p>
+    <p>
+      <a class="button button--primary" href="{{ routes.root_url }}">{{ 'templates.404.back_to_home' | t }}</a>
+    </p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_404.name",
+  "tag": "section"
+}
+{% endschema %}

@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main_page": { "name": "Side" },
+    "main_404": { "name": "404" },
+    "placeholder": { "name": "Pladsholder" },
+    "home_mission": { "name": "Forside: mission" }
+  }
+}

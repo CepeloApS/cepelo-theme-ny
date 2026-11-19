@@ -1,0 +1,24 @@
+{
+  "general": {
+    "meta": {
+      "tags": "Tagget med »{{ tags }}«",
+      "page": "Side {{ page }}"
+    },
+    "placeholder": {
+      "under_construction": "Denne sidetype bygges i et senere trin."
+    }
+  },
+  "accessibility": {
+    "skip_to_content": "Gå til indhold"
+  },
+  "templates": {
+    "home": {
+      "mission": "Vi sikrer fremtidens værksted"
+    },
+    "404": {
+      "title": "Siden findes ikke",
+      "subtext": "Siden er flyttet eller findes ikke længere.",
+      "back_to_home": "Gå til forsiden"
+    }
+  }
+}
