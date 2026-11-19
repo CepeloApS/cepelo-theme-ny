@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO – Elbil: service og reparation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400}
+a{color:#000000}a:hover{color:#0868B2}
+.h{font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0;color:#000000}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;box-sizing:border-box}
+.btn-p{background:#0868B2;color:#FFFFFF}.btn-p:hover{background:#173454;color:#FFFFFF}
+.btn-s{background:#FFFFFF;color:#000000;border:1.5px solid #000000}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:#000000;background:#F0F0F0;border-radius:4px;padding:4px 10px}
+@media (max-width:720px){.wrap{padding:0 16px}}
+</style>
+</helmet>
+<div style="width:100%;min-width:0">
+
+<dc-import name="Header" menu="Lukket" hint-size="100%,116px"></dc-import>
+
+<!-- Intro -->
+<section style="background:#F0F0F0;padding:32px 0 64px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:48px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:18px">
+<nav aria-label="Brødkrumme" style="font-size:13px"><a href="Main.dc.html">Forside</a> › <a href="Viden.dc.html">Løsninger og viden</a> › Elbil: service og reparation</nav>
+<h1 class="h" style="font-size:46px;line-height:1.05;margin-top:16px">Elbil: service og reparation</h1>
+<div style="background:#FFFFFF;border-radius:8px;padding:20px 24px">
+<p style="margin:0;font-size:17px;line-height:1.6"><strong style="font-weight:600">Kort svar:</strong> For at arbejde sikkert på en elbil skal værkstedet kunne gøre HV-systemet spændingsfrit, måle isolation og potentialudligning og dokumentere hver måling. CEPELO leverer udstyret, kurserne og supporten til hele forløbet.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a href="#demo" class="btn btn-p">Book demo</a><a href="#udstyr" class="btn btn-s">Se udstyret</a></div>
+</div>
+<div style="background:#FFFFFF;border-radius:8px;padding:24px"><img src="/_blob/887c57c10d49f4fb0e10b8b9da8cb5a4" alt="Autel EVDiag Box 2 i værkstedskuffert" style="width:100%;height:340px;object-fit:contain"></div>
+</div>
+</section>
+
+<nav aria-label="På denne side" style="background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:4px 28px;min-height:60px;align-items:center">
+<a href="#forlob" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Arbejdsgang</a>
+<a href="#udstyr" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Udstyr</a>
+<a href="#case" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Kundehistorie</a>
+<a href="#guides" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Guides og manualer</a>
+<a href="#kursus" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Kursus</a>
+<a href="#faq" style="font-weight:600;font-size:14px;text-decoration:none;padding:12px 0">Spørgsmål og svar</a>
+</div>
+</nav>
+
+<!-- Arbejdsgang -->
+<section id="forlob" style="padding:56px 0 72px;background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<h2 class="h" style="font-size:32px;line-height:1.1">Sådan arbejder I sikkert på HV-systemet</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#F0F0F0;border-radius:8px;padding:28px">
+<span class="h" style="font-size:40px;line-height:1;color:#0868B2">1</span>
+<h3 class="h" style="font-size:18px">Før arbejdet</h3>
+<p style="margin:0;font-size:15px;line-height:1.6">Kør batteriets hurtigtjek, aflad HV-systemet guidet efter SAE J1766, og mål at systemet er spændingsfrit.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#F0F0F0;border-radius:8px;padding:28px">
+<span class="h" style="font-size:40px;line-height:1;color:#0868B2">2</span>
+<h3 class="h" style="font-size:18px">Under arbejdet</h3>
+<p style="margin:0;font-size:15px;line-height:1.6">Mål isolationsmodstand på batteri, kabler og komponenter, og cellernes indre modstand ved fejlsøgning.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#F0F0F0;border-radius:8px;padding:28px">
+<span class="h" style="font-size:40px;line-height:1;color:#0868B2">3</span>
+<h3 class="h" style="font-size:18px">Efter arbejdet</h3>
+<p style="margin:0;font-size:15px;line-height:1.6">Test potentialudligningen, og gem hver måling som rapport til kunde og værksted.</p>
+</div>
+</div>
+<form aria-label="Få guiden som PDF" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;background:#F0F0F0;border-radius:8px;padding:16px 24px">
+<svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true" style="flex:0 0 auto"><path d="M6 3h11l5 5v17H6zM17 3v5h5M14 12v8M10.5 16.5 14 20l3.5-3.5"></path></svg>
+<label for="lpdf" style="flex:1 1 320px;font-size:16px;line-height:1.4"><strong style="font-weight:600">Få PDF-guiden »Elbil: service og reparation«</strong> – vi sender den til din mail.</label>
+<input id="lpdf" type="email" placeholder="navn@værksted.dk" style="flex:0 1 300px;height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;background:#FFFFFF;box-sizing:border-box">
+<button type="button" class="btn btn-p" style="border:0;cursor:pointer">Send guiden</button>
+</form>
+</div>
+</section>
+
+<!-- Udstyr -->
+<section id="udstyr" style="padding:72px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:32px;line-height:1.1">Udstyret til løsningen</h2>
+<a href="https://cepelo.dk/collections/vaerktoj-til-elbiler" style="font-weight:600;font-size:15px">Se alt i shoppen →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="4">
+<a href="Produkt.dc.html" style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:8px;padding:20px;text-decoration:none;color:#000000">
+<span class="tag" style="align-self:flex-start">{{p.role}}</span>
+<img src="{{p.img}}" alt="{{p.name}}" style="width:100%;height:180px;object-fit:contain">
+<span class="h" style="font-size:15px;line-height:1.3">{{p.name}}</span>
+<span style="font-size:14px;line-height:1.5">{{p.why}}</span>
+<span style="margin-top:auto;font-weight:600;font-size:14px">Se produktet →</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Kundehistorie -->
+<section id="case" style="padding:72px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:40px;align-items:center">
+<img src="/_blob/05fdfc6bc0b0fb11fdebdc921d088820" alt="Kvalitetsbiler" style="width:100%;height:320px;object-fit:cover;border-radius:8px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 class="h" style="font-size:28px;line-height:1.15">Kundehistorie: Kvalitetsbiler</h2>
+<p style="margin:0;font-size:17px;line-height:1.6">Bedre dokumentation og stærkere kundetillid med Autel. [KORT RESUMÉ: udfordring, løsning og resultat]</p>
+<p style="margin:0;font-size:15px;line-height:1.6;background:#F0F0F0;border-radius:8px;padding:18px 20px">»[Citat fra værkstedet – fra kundehistorien]«<br><strong style="font-weight:600">[Navn, titel]</strong></p>
+<a href="https://cepelo.dk/blogs/kundehistorier" class="btn btn-s" style="align-self:flex-start">Læs hele historien</a>
+</div>
+</div>
+</section>
+
+<!-- Guides og manualer -->
+<section id="guides" style="padding:72px 0;background:#F0F0F0">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<h2 class="h" style="font-size:28px;line-height:1.1">Guides</h2>
+<sc-for list="{{guides}}" as="g" hint-placeholder-count="3">
+<a href="{{g.url}}" style="display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border-radius:8px;padding:18px 20px;text-decoration:none;color:#000000">
+<span class="h" style="font-size:15px;line-height:1.35">{{g.title}}</span>
+<span style="font-size:13px">{{g.meta}}</span>
+</a>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<h2 class="h" style="font-size:28px;line-height:1.1">Vejledninger og manualer</h2>
+<sc-for list="{{docs}}" as="d" hint-placeholder-count="4">
+<a href="#" style="display:flex;gap:16px;align-items:center;background:#FFFFFF;border-radius:8px;padding:16px 20px;text-decoration:none;color:#000000;min-height:44px">
+<svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M6 3h11l5 5v17H6zM17 3v5h5M14 12v8M10.5 16.5 14 20l3.5-3.5"></path></svg>
+<span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-weight:600;font-size:15px">{{d.name}}</span><span style="font-size:13px">{{d.meta}}</span></span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Kursus -->
+<section id="kursus" style="padding:72px 0;background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;background:#F0F0F0;border-radius:8px;padding:36px 40px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:680px">
+<h2 class="h" style="font-size:26px;line-height:1.15">Kursus i CEPELO Academy</h2>
+<p style="margin:0;font-size:16px;line-height:1.6">Lær at bruge jeres Autel-tester korrekt – også til batteri- og HV-funktioner. Kurser i HV-sikkerhed er på vej.</p>
+</div>
+<a href="Academy.dc.html" class="btn btn-p">Se kurser</a>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:0 0 72px;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px">
+<h2 class="h" style="font-size:28px;line-height:1.1">Spørgsmål om elbilservice</h2>
+<div style="display:flex;flex-direction:column;gap:10px">
+<details open="" style="background:#F0F0F0;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Hvilke målinger skal dokumenteres?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FAQ-METAFELT – UDFYLDES AF SEO ENGINE]</p></details>
+<details style="background:#F0F0F0;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Virker EVDiag Box 2 med vores nuværende tester?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">Den virker med MaxiSYS Ultra, MS919, MS909, Ultra S2, MS919S2 og MS909S2.</p></details>
+<details style="background:#F0F0F0;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Kan udstyret leases?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FÆLLES LEASINGFELT]</p></details>
+</div>
+</div>
+</section>
+
+<!-- Demo -->
+<section id="demo" style="padding:64px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:640px">
+<h2 class="h" style="font-size:28px;line-height:1.1">Se udstyret i praksis</h2>
+<p style="margin:0;font-size:16px;line-height:1.6">Book en demo i Aalborg eller Kolding, eller få en specialist ud til jer.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a href="https://cepelo.dk/pages/showroom" class="btn btn-p">Book demo</a><a href="tel:+4598180900" class="btn btn-s">98 18 09 00</a></div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4600}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+products: [
+{ role: 'HV-måling', name: 'Autel EVDiag Box 2', why: 'Batteridiagnose og fire HV-målinger i ét apparat.', img: '/_blob/887c57c10d49f4fb0e10b8b9da8cb5a4' },
+{ role: 'Tester', name: 'Autel MaxiSys Ultra S2', why: 'Diagnosetabletten, boksen kobles til.', img: '/_blob/358ac8bd61ec81f4210a6a365f37c5f8' },
+{ role: 'Tester', name: 'Autel MaxiSys 919S2', why: 'Kompatibel tablet til EVDiag Box 2.', img: '/_blob/66580f43e692b28d958c550507aeb4d9' },
+{ role: 'Software', name: 'Autel SOH Blitz Test 12 mdr.', why: 'Hurtig SOH-måling med rapport.', img: '/_blob/8dc0a148adc528946f9836da1c75edbf' }
+],
+guides: [
+{ title: 'EVDiag Box 2: tre HV-specialværktøjer samlet i ét apparat', meta: 'Nyhed · 9. oktober 2026', url: 'https://cepelo.dk/blogs/inspiration/nyhed-fra-autel-evdiag-box-2-tre-hv-specialvaerktojer-samlet-i-et-apparat' },
+{ title: 'Fremtidens biler kræver nye kompetencer, nyt udstyr og nye services', meta: 'Guide · 15. juni 2026', url: 'https://cepelo.dk/blogs/inspiration/fremtidens-biler-kraever-nye-kompetencer-nyt-udstyr-og-nye-services' },
+{ title: 'Få hurtigere og mere præcise batteridiagnoser med Autel', meta: 'Guide · 10. november 2025', url: 'https://cepelo.dk/blogs/inspiration/ny-standard-for-hurtig-og-praecis-kontrol-af-elbilbatteriers-tilstand-med-autel-soh-blitz-test' }
+],
+docs: [
+{ name: 'EVDiag Box 2 – brugervejledning', meta: 'PDF · Dansk · [STØRRELSE]' },
+{ name: 'EVDiag Box 2 – datablad', meta: 'PDF · [STØRRELSE]' },
+{ name: 'Guidet HV-afladning – trin for trin', meta: 'PDF · Dansk' },
+{ name: 'Vejledning til softwareopdatering af BCE100', meta: 'Guide' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

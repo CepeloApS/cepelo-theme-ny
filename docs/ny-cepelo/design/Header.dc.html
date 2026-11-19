@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO – fælles header</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="position:relative;z-index:50;width:100%;font-family:'Open Sans',Arial,sans-serif;font-weight:400;color:#000000;background:#FFFFFF">
+
+<!-- Topbar -->
+<div style="background:#F0F0F0;font-size:13px;color:#000000">
+<div style="max-width:1280px;margin:0 auto;padding:6px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;align-items:center;min-height:36px">
+<div style="display:flex;flex-wrap:wrap;gap:6px 24px">
+<span>Rådgivning: <a href="tel:+4598180900" style="color:#000000;font-weight:600">98 18 09 00</a></span>
+<span>Teknisk support: <a href="tel:+4598180203" style="color:#000000;font-weight:600">98 18 02 03</a></span>
+<span>Showrooms i Aalborg og Kolding</span>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<a href="#" style="color:#000000">Forhandler? Log ind for nettopriser</a>
+<a href="#" style="color:#000000;font-weight:600">DK</a><a href="#" style="color:#000000">NO</a>
+</div>
+</div>
+</div>
+
+<!-- Hovedlinje -->
+<header style="border-bottom:1px solid #D8D8D8">
+<div style="max-width:1280px;margin:0 auto;padding:12px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;min-height:80px">
+<a href="Main.dc.html" aria-label="CEPELO forside" style="display:flex"><img src="/_blob/feb2d38c5dd471249c4b042062fc0ad1" alt="CEPELO" style="height:38px;width:auto"></a>
+<nav aria-label="Hovedmenu" style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;flex:1 1 480px">
+<div style="display:flex;background:#F0F0F0;border-radius:6px;padding:4px">
+<sc-if value="{{mL}}" hint-placeholder-val="{{false}}"><button type="button" aria-expanded="true" onClick="{{closeMenu}}" style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:13px;color:#FFFFFF;background:#0868B2;border:0;padding:0 16px;min-height:40px;display:flex;align-items:center;gap:8px;border-radius:4px;cursor:pointer">Løsninger og viden <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 8 4-4 4 4"></path></svg></button></sc-if>
+<sc-if value="{{notL}}" hint-placeholder-val="{{true}}"><button type="button" aria-expanded="false" onClick="{{openL}}" style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:13px;color:#000000;background:transparent;border:0;padding:0 16px;min-height:40px;display:flex;align-items:center;gap:8px;border-radius:4px;cursor:pointer">Løsninger og viden <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"></path></svg></button></sc-if>
+<sc-if value="{{mS}}" hint-placeholder-val="{{false}}"><button type="button" aria-expanded="true" onClick="{{closeMenu}}" style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:13px;color:#FFFFFF;background:#0868B2;border:0;padding:0 16px;min-height:40px;display:flex;align-items:center;gap:8px;border-radius:4px;cursor:pointer">Shop <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 8 4-4 4 4"></path></svg></button></sc-if>
+<sc-if value="{{notS}}" hint-placeholder-val="{{true}}"><button type="button" aria-expanded="false" onClick="{{openS}}" style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:13px;color:#000000;background:transparent;border:0;padding:0 16px;min-height:40px;display:flex;align-items:center;gap:8px;border-radius:4px;cursor:pointer">Shop <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"></path></svg></button></sc-if>
+</div>
+<sc-if value="{{mB}}" hint-placeholder-val="{{false}}"><button type="button" aria-expanded="true" onClick="{{closeMenu}}" style="font-family:inherit;font-size:14px;font-weight:600;color:#000000;background:transparent;border:0;min-height:44px;display:flex;align-items:center;gap:6px;cursor:pointer;text-decoration:underline;text-underline-offset:6px">Brands <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 8 4-4 4 4"></path></svg></button></sc-if>
+<sc-if value="{{notB}}" hint-placeholder-val="{{true}}"><button type="button" aria-expanded="false" onClick="{{openB}}" style="font-family:inherit;font-size:14px;font-weight:600;color:#000000;background:transparent;border:0;min-height:44px;display:flex;align-items:center;gap:6px;cursor:pointer">Brands <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"></path></svg></button></sc-if>
+<a href="Support.dc.html" style="font-size:14px;font-weight:600;color:#000000;text-decoration:none;padding:12px 0">Support</a>
+<a href="Academy.dc.html" style="font-size:14px;font-weight:600;color:#000000;text-decoration:none;padding:12px 0">Academy</a>
+<a href="https://cepelo.dk/pages/showroom" style="font-size:14px;font-weight:600;color:#000000;text-decoration:none;padding:12px 0">Showroom</a>
+</nav>
+<div style="display:flex;align-items:center;gap:6px">
+<label for="hq" style="position:absolute;left:-9999px">Søg</label>
+<input id="hq" type="search" placeholder="Søg produkt, varenr. eller emne" style="width:240px;max-width:100%;height:44px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:14px;color:#000000;background:#FFFFFF;box-sizing:border-box">
+<a href="#" aria-label="Log ind" style="display:flex;width:44px;height:44px;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M8 8a4 4 0 1 0 8 0 4 4 0 1 0-8 0M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+<a href="#" aria-label="Kurv" style="display:flex;width:44px;height:44px;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M3 4h2l2.4 11h11l2-8H6.2M8 19h2v2H8zM16 19h2v2h-2z"></path></svg></a>
+<a href="Main.dc.html#demo" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:6px;background:#0868B2;color:#FFFFFF;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none">Book demo</a>
+</div>
+</div>
+</header>
+
+<!-- Mega-menu: Løsninger og viden -->
+<sc-if value="{{mL}}" hint-placeholder-val="{{false}}">
+<div role="region" aria-label="Menu: Løsninger og viden" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-bottom:1px solid #D8D8D8;box-shadow:0 24px 48px rgba(0,0,0,.18)">
+<div style="max-width:1280px;margin:0 auto;padding:28px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:28px">
+<div style="flex:999 1 640px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:18px;color:#000000">Løsninger</span>
+<a href="Viden.dc.html" style="font-weight:600;font-size:14px;color:#000000">Alle løsninger →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:12px">
+<sc-for list="{{solutions}}" as="s" hint-placeholder-count="6">
+<div style="display:flex;gap:14px;align-items:flex-start;background:#F0F0F0;border-radius:8px;padding:14px">
+<img src="{{s.img}}" alt="" style="flex:0 0 72px;width:72px;height:72px;object-fit:contain;mix-blend-mode:multiply">
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+<a href="{{s.url}}" style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;line-height:1.25;color:#000000;text-decoration:none">{{s.name}}</a>
+<span style="font-size:13px;line-height:1.45;color:#000000">{{s.answer}}</span>
+<span style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;font-weight:600"><a href="{{s.url}}" style="color:#000000">Guides</a><a href="{{s.shop}}" style="color:#000000">Udstyr</a><a href="Academy.dc.html" style="color:#000000">Kursus</a></span>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="flex:1 1 280px;background:#F0F0F0;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:2px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:18px;color:#000000;margin-bottom:10px">Viden og service</span>
+<sc-for list="{{links}}" as="l" hint-placeholder-count="7">
+<a href="{{l.url}}" style="display:flex;align-items:center;gap:12px;min-height:42px;color:#000000;text-decoration:none;font-size:15px;font-weight:600"><span style="flex:1">{{l.name}}</span><span aria-hidden="true">›</span></a>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- Mega-menu: Shop -->
+<sc-if value="{{mS}}" hint-placeholder-val="{{false}}">
+<div role="region" aria-label="Menu: Shop" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-bottom:1px solid #D8D8D8;box-shadow:0 24px 48px rgba(0,0,0,.18)">
+<div style="max-width:1280px;margin:0 auto;padding:24px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px">
+<div role="tablist" aria-orientation="vertical" aria-label="Produktgrupper" style="flex:0 1 290px;min-width:240px;display:flex;flex-direction:column;gap:2px">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="10">
+<sc-if value="{{g.on}}" hint-placeholder-val="{{false}}"><button type="button" role="tab" aria-selected="true" onMouseEnter="{{g.pick}}" onClick="{{g.pick}}" style="display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 12px;border:0;border-radius:6px;background:#0868B2;color:#FFFFFF;font-family:inherit;font-size:14px;font-weight:600;text-align:left;cursor:pointer"><span style="flex:1">{{g.name}}</span><sc-if value="{{g.isSolution}}" hint-placeholder-val="{{false}}"><span style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:#FFFFFF;color:#000000;border-radius:3px;padding:2px 6px">Løsning</span></sc-if><span aria-hidden="true">›</span></button></sc-if>
+<sc-if value="{{g.off}}" hint-placeholder-val="{{true}}"><button type="button" role="tab" aria-selected="false" onMouseEnter="{{g.pick}}" onClick="{{g.pick}}" style="display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 12px;border:0;border-radius:6px;background:transparent;color:#000000;font-family:inherit;font-size:14px;font-weight:600;text-align:left;cursor:pointer"><span style="flex:1">{{g.name}}</span><sc-if value="{{g.isSolution}}" hint-placeholder-val="{{false}}"><span style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:#F0F0F0;color:#000000;border-radius:3px;padding:2px 6px">Løsning</span></sc-if><span aria-hidden="true">›</span></button></sc-if>
+</sc-for>
+<a href="Kategorier.dc.html" style="font-size:14px;font-weight:600;padding:12px;color:#000000;margin-top:8px">Alle produktkategorier →</a>
+<a href="https://cepelo.dk/pages/kampagner" style="font-size:14px;font-weight:600;padding:8px 12px;color:#000000">Tilbud og kampagner</a>
+<a href="https://cepelo.dk/collections/brugt-udstyr" style="font-size:14px;font-weight:600;padding:8px 12px;color:#000000">Brugt udstyr</a>
+</div>
+<div role="tabpanel" style="flex:999 1 460px;min-width:0;display:flex;flex-direction:column;gap:16px;background:#F0F0F0;border-radius:8px;padding:24px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:20px;color:#000000">{{cur.name}}</span><span style="font-size:14px;color:#000000">{{cur.lead}}</span></div>
+<a href="{{cur.url}}" style="font-weight:600;font-size:14px;color:#000000">Se alle →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr));gap:10px">
+<sc-for list="{{cur.subs}}" as="s" hint-placeholder-count="6">
+<a href="{{s.url}}" style="display:flex;align-items:center;background:#FFFFFF;border-radius:6px;padding:12px 14px;text-decoration:none;color:#000000;font-size:14px;font-weight:600;min-height:48px;box-sizing:border-box">{{s.name}}</a>
+</sc-for>
+</div>
+<sc-if value="{{cur.isSolution}}" hint-placeholder-val="{{true}}">
+<a href="{{cur.solutionUrl}}" style="display:flex;align-items:center;gap:14px;background:#FFFFFF;border-radius:6px;padding:14px 18px;text-decoration:none;color:#000000">
+<span style="flex:1;font-size:14px;line-height:1.5"><strong style="font-weight:600">Usikker på, hvad I skal bruge?</strong> Løsningen »{{cur.solution}}« forklarer arbejdsgang, udstyr, guides og kurser.</span>
+<span style="font-weight:600;font-size:14px;white-space:nowrap">Gå til løsningen →</span>
+</a>
+</sc-if>
+</div>
+<div style="flex:0 1 250px;min-width:220px;display:flex;flex-direction:column;gap:10px">
+<img src="{{cur.img}}" alt="" style="width:100%;height:160px;object-fit:contain;background:#F0F0F0;border-radius:8px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:15px;line-height:1.25;color:#000000">{{cur.featured}}</span>
+<a href="{{cur.featuredUrl}}" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:6px;background:#0868B2;color:#FFFFFF;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;text-decoration:none;align-self:flex-start">Se produktet</a>
+</div>
+</div>
+<div style="background:#FFFFFF">
+<div style="max-width:1280px;margin:0 auto;padding:4px 32px 16px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
+<span style="font-weight:600;font-size:14px;color:#000000;margin-right:8px">Brands:</span>
+<sc-for list="{{brands}}" as="b" hint-placeholder-count="7">
+<a href="{{b.url}}" aria-label="{{b.name}}" style="display:flex;align-items:center;justify-content:center;width:92px;height:40px;overflow:hidden"><img src="{{b.logo}}" alt="{{b.name}}" style="width:92px;height:92px;object-fit:contain;filter:grayscale(1)"></a>
+</sc-for>
+<button type="button" onClick="{{openB}}" style="margin-left:auto;font-family:inherit;font-weight:600;font-size:14px;color:#000000;background:transparent;border:0;min-height:44px;cursor:pointer">Alle brands →</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- Mega-menu: Brands -->
+<sc-if value="{{mB}}" hint-placeholder-val="{{false}}">
+<div role="region" aria-label="Menu: Brands" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-bottom:1px solid #D8D8D8;box-shadow:0 24px 48px rgba(0,0,0,.18)">
+<div style="max-width:1280px;margin:0 auto;padding:28px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:28px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:12px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:18px;color:#000000">Vores egne brands</span>
+<a href="https://cepelo.dk/collections/cepelo" style="display:flex;flex-direction:column;gap:10px;background:#F0F0F0;border-radius:8px;padding:20px;text-decoration:none;color:#000000">
+<img src="/_blob/feb2d38c5dd471249c4b042062fc0ad1" alt="CEPELO" style="width:140px;height:40px;object-fit:contain;object-position:left center">
+<span style="font-size:14px;line-height:1.5">Værkstedsudstyr udviklet af CEPELO – fx bremseskiveafdrejer, chassis tester og A/C-termometer.</span>
+</a>
+<a href="https://cepelo.dk/collections/zmartgear" style="display:flex;gap:14px;align-items:center;background:#F0F0F0;border-radius:8px;padding:14px 20px;text-decoration:none;color:#000000">
+<span style="flex:0 0 92px;width:92px;height:48px;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="/_blob/af34aa7d8cc706e0e59ba43620f1f921" alt="Zmartgear" style="width:104px;height:104px;object-fit:contain"></span>
+<span style="font-size:14px;line-height:1.5">Ladere, nødstrøm, mobiludstyr og værksteds-elektronik.</span>
+</a>
+</div>
+<div style="flex:999 1 580px;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:18px;color:#000000">Brands vi leverer og supporterer</span>
+<a href="https://cepelo.dk/pages/alle-brands" style="font-weight:600;font-size:14px;color:#000000">Alle brands →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:10px">
+<sc-for list="{{brandCards}}" as="b" hint-placeholder-count="9">
+<a href="{{b.url}}" style="display:flex;flex-direction:column;gap:4px;background:#F0F0F0;border-radius:8px;padding:12px 14px;text-decoration:none;color:#000000">
+<sc-if value="{{b.hasLogo}}" hint-placeholder-val="{{true}}"><span style="height:44px;overflow:hidden;display:flex;align-items:center"><img src="{{b.logo}}" alt="{{b.name}}" style="width:100px;height:100px;object-fit:contain;margin-left:-10px;filter:grayscale(1)"></span></sc-if>
+<sc-if value="{{b.noLogo}}" hint-placeholder-val="{{false}}"><span style="height:44px;display:flex;align-items:center;font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:16px">{{b.name}}</span></sc-if>
+<span style="font-size:13px;line-height:1.45">{{b.desc}}</span>
+<span style="font-size:12px;font-weight:600">{{b.count}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"menu":{"editor":"enum","options":["Lukket","Løsninger og viden","Shop","Brands"],"default":"Shop"},"$preview":{"width":1440,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { menu: null, g: 'diagnose' }; }
+renderVals() {
+const map = { 'Lukket': 'none', 'Løsninger og viden': 'L', 'Shop': 'S', 'Brands': 'B' };
+const m = this.state.menu || map[this.props.menu ?? 'Shop'] || 'none';
+const C = 'https://cepelo.dk/collections/';
+const s = (name, h) => ({ name: name, url: C + h });
+const all = [
+{ id: 'diagnose', name: 'Diagnose og programmering', solution: 'Autodiagnose', solutionUrl: '#', lead: 'Testere, software, nøglekodning og tilbehør.', url: C + 'autodiagnose-10', img: '/_blob/b706fcf6c300b03d25582c55e9493b2c', featured: 'Autel MaxiSys Ultra S2', featuredUrl: 'Produkt.dc.html', subs: [s('Autotestere', 'autotestere'), s('Software og licenser', 'software'), s('Tilbehør til autodiagnose', 'tilbehor-til-autodiagnose'), s('Reservedele til testere', 'reservedele-til-autodiagnose'), s('Nøgletestere', 'nogletestere-1'), s('Bilnøgler', 'nogleskaering-1'), s('Nøgleskærere', 'nogleskaerer'), s('Lastbil og bus', 'udstyr-til-lastbiler-og-busser')] },
+{ id: 'adas', name: 'ADAS og hjuludmåling', solution: 'ADAS og hjuludmåling', solutionUrl: '#', lead: 'Kalibreringstavler, radar, hjuludmåling og reservedele.', url: C + 'adas-og-hjuludmaling-2', img: '/_blob/b294fbdd14a0f1285adbb336ca1d904a', featured: 'Kampagne: IA1000 inkl. MaxiSys MS909S2', featuredUrl: '#', subs: [s('Tavler', 'tavler'), s('Radar', 'radar'), s('Tilbehør', 'tilbehor-til-adas-og-hjuludmaling'), s('Reservedele til IA-serien', 'reservedele-til-ia-serien'), s('Køretøjsinspektion', 'koretojs-inspektion')] },
+{ id: 'elbil', name: 'Elbil: service og reparation', solution: 'Elbil: service og reparation', solutionUrl: 'Losning.dc.html', lead: 'HV-måling, batterireparation, SOH og sikkerhedsgodkendt værktøj.', url: C + 'vaerktoj-til-elbiler', img: '/_blob/8cfefb71866d8fbee2d400f61a6c95a9', featured: 'Autel EVDiag Box 2', featuredUrl: 'Produkt.dc.html', subs: [s('Batterireparation', 'batterireparation'), s('Sikkerhedsgodkendt værktøj', 'sikkerhedsgodkendt-vaerktoj'), s('Batterilifte', 'batterilifte'), s('SOH-test', 'soh-udvalgte')] },
+{ id: 'lad', name: 'Opladning', solution: 'Opladning', solutionUrl: '#', lead: 'AC- og DC-ladere, mobile ladere og ladekabler.', url: C + 'ev-udstyr-7', img: '/_blob/7b08ed287a5e3fd6b142c0dd784702d3', featured: 'Zmartgear DC-lader 40 kW', featuredUrl: 'https://cepelo.dk/products/zmartgear-dc-lader-40-kw', subs: [s('Bærbare ladere', 'baerbare-ladere-til-elbil'), s('AC-ladere', 'lader-til-elbiler'), s('DC-ladere', 'dc-lader-til-elbil'), s('Ladekabler', 'ladekabler-til-elbiler'), s('Tilbehør', 'tilbehor-til-elbiler-og-ladere')] },
+{ id: 'ac', name: 'A/C-service', solution: 'A/C-service', solutionUrl: '#', lead: 'A/C-maskiner til R1234yf og R134a.', url: C + 'aircondition-maskiner', img: '/_blob/f57054b47f7fe4acd50a4d78316fe9c3', featured: 'CEPELO A/C-termometer', featuredUrl: 'https://cepelo.dk/products/cepelo-a-c-termometer', subs: [s('A/C-maskiner', 'aircondition-maskiner')] },
+{ id: 'bat', name: 'Batteri og start', lead: 'Batteriladere, boostere, invertere og batteritestere.', url: C + 'batteriladere-og-boostere-1', img: '/_blob/a0f1da6d865a53b0c24590a0b08ac2b2', featured: 'Boostere til 12 V og 24 V', featuredUrl: C + 'boostere', subs: [s('Batteriladere', 'batteriladere'), s('Boostere', 'boostere'), s('Invertere', 'invertere'), s('Batteritestere', 'batteritestere'), s('Tilbehør', 'tilbehor-til-batteriladere-og-boostere')] },
+{ id: 'tpms', name: 'Dæk og TPMS', lead: 'TPMS-værktøj, sensorer og dækudstyr.', url: C + 'tpms-og-daekudstyr', img: '/_blob/a909ca2fab4e78cb440cfe7ce4b9163f', featured: 'Autel MaxiTPMS TS508', featuredUrl: 'https://cepelo.dk/blogs/support/sadan-bruger-du-autel-maxitpms-ts508', subs: [s('TPMS-værktøj', 'tpms-vaerktoj'), s('TPMS-sensorer', 'tpms-sensorer'), s('Reservedele', 'reservedele-til-tpms'), s('Dækudstyr', 'daekudstyr')] },
+{ id: 'lift', name: 'Lifte og løfteudstyr', lead: 'Autolifte, batterilifte, donkrafte og løftebukke.', url: C + 'lifte', img: '/_blob/b8d84c41147a17d485b568a0f02adcd6', featured: 'Batterilifte til elbiler', featuredUrl: C + 'batterilifte', subs: [s('Autolifte', 'autolifte'), s('Batterilifte', 'batterilifte'), s('Donkrafte', 'donkrafte'), s('Løftebukke', 'loftebukke'), s('Øvrigt løfteudstyr', 'ovrigt-lofteudstyr'), s('Tilbehør til lifte', 'tilbehor-til-lifte')] },
+{ id: 'vaerksted', name: 'Værkstedsudstyr og værktøj', lead: 'Specialmaskiner, lygteapparater, specialværktøj og forbrug.', url: C + 'diverse-vaerkstedsudstyr', img: '/_blob/d360697a2426626239be26e9d930ec04', featured: 'CEPELO bremseskiveafdrejer', featuredUrl: 'https://cepelo.dk/blogs/support/guide-til-brug-af-cepelo-bremseskiveafdrejer', subs: [s('Specialmaskiner', 'specialmaskiner'), s('Lygteapparater', 'lygteapparater'), s('Emissionstest', 'emissionstest'), s('Specialværktøj', 'specialvaerktoj'), s('Elværktøj', 'elvaerktoj'), s('Inspektionsværktøj', 'inspektionsvaerktoj'), s('Induktionsvarmere', 'induktionsvarmer'), s('Lim og tape', 'lim-og-tape-1'), s('Lys og lygter', 'lys-og-lygter-2')] },
+{ id: 'pro', name: 'Pro-shop', lead: 'Høreværn, værnemidler, kommunikation og nødstrøm – fra Zmartgear, ISOtunes m.fl.', url: C + 'zmartgear', img: '/_blob/bbb86ca0701f0c43ea18b301415efe64', featured: 'ISOtunes høreværn', featuredUrl: C + 'isotunes', subs: [s('Høreværn', 'horevaern-4'), s('Personlige værnemidler', 'personlige-vaernemidler'), s('Kommunikation', 'kommunikation'), s('Mobiludstyr', 'mobiludstyr-4'), s('GPS-tracking', 'gps-tracking-3'), s('Nødstrøm', 'nodstrom-1'), s('Videoovervågning', 'videoovervagning-3'), s('Biludstyr', 'condition-1-value-biludstyr'), s('Løbehjul', 'lobehjul')] }
+];
+const cur0 = all.find((x) => x.id === this.state.g) || all[0];
+const bc = (name, logo, desc, count, h) => ({ name: name, logo: logo, hasLogo: !!logo, noLogo: !logo, desc: desc, count: count, url: h ? C + h : 'https://cepelo.dk/pages/alle-brands' });
+return {
+mL: m === 'L', notL: m !== 'L', mS: m === 'S', notS: m !== 'S', mB: m === 'B', notB: m !== 'B',
+openL: () => this.setState({ menu: 'L' }), openS: () => this.setState({ menu: 'S' }), openB: () => this.setState({ menu: 'B' }), closeMenu: () => this.setState({ menu: 'none' }),
+cur: Object.assign({}, cur0, { isSolution: !!cur0.solution }),
+groups: all.map((x) => { const on = x.id === cur0.id; return { name: x.name, on: on, off: !on, isSolution: !!x.solution, pick: () => this.setState({ g: x.id }) }; }),
+solutions: [
+{ name: 'Elbil: service og reparation', answer: 'HV-måling, batterireparation og sikkert værktøj.', url: 'Losning.dc.html', shop: C + 'vaerktoj-til-elbiler', img: '/_blob/8cfefb71866d8fbee2d400f61a6c95a9' },
+{ name: 'SOH-batteritest', answer: 'CARA-certificeret dokumentation af batteriet.', url: 'https://cepelo.dk/pages/soh-batteritilstand', shop: C + 'soh-udvalgte', img: '/_blob/8dc0a148adc528946f9836da1c75edbf' },
+{ name: 'ADAS og hjuludmåling', answer: 'Kalibrering og sporing i én arbejdsgang.', url: '#', shop: C + 'adas-og-hjuludmaling-2', img: '/_blob/b294fbdd14a0f1285adbb336ca1d904a' },
+{ name: 'Autodiagnose', answer: 'Fejlfinding, kodning og SERMI-adgang.', url: '#', shop: C + 'autodiagnose-10', img: '/_blob/b706fcf6c300b03d25582c55e9493b2c' },
+{ name: 'A/C-service', answer: 'Service af R1234yf- og R134a-anlæg.', url: '#', shop: C + 'aircondition-maskiner', img: '/_blob/f57054b47f7fe4acd50a4d78316fe9c3' },
+{ name: 'Opladning', answer: 'AC- og DC-ladere til værksted og erhverv.', url: '#', shop: C + 'ev-udstyr-7', img: '/_blob/7b08ed287a5e3fd6b142c0dd784702d3' }
+],
+links: [
+{ name: 'Guides og vejledninger', url: 'https://cepelo.dk/blogs/support' },
+{ name: 'Support', url: 'Support.dc.html' },
+{ name: 'CEPELO Academy', url: 'Academy.dc.html' },
+{ name: 'Kundehistorier', url: 'https://cepelo.dk/blogs/kundehistorier' },
+{ name: 'Inspiration og nyheder', url: 'https://cepelo.dk/blogs/inspiration' },
+{ name: 'Beregn dit afkast', url: 'https://cepelo.dk/pages/produkt-konfigurator' },
+{ name: 'Showroom i Aalborg og Kolding', url: 'https://cepelo.dk/pages/showroom' }
+],
+brands: [
+{ name: 'Autel', logo: '/_blob/79b80f9080642fc3dc6b71c6fa1f9afe', url: C + 'autel' },
+{ name: 'Zmartgear', logo: '/_blob/af34aa7d8cc706e0e59ba43620f1f921', url: C + 'zmartgear' },
+{ name: 'JBM', logo: '/_blob/0049c998cc44071cbb0de7c0184a405b', url: C + 'jbm' },
+{ name: 'Schumacher', logo: '/_blob/d664b421ea25edc62a68271f244d722a', url: C + 'schumacher' },
+{ name: 'ISOtunes', logo: '/_blob/95865d153a5b96721e367e1057f6cb41', url: C + 'isotunes' },
+{ name: 'Govoni', logo: '/_blob/2f56b3cb968c0203dbade5302393da3c', url: C + 'govoni' },
+{ name: 'Capelec', logo: '/_blob/058c991e14ae436d83accd2b4415292c', url: C + 'capelec' }
+],
+brandCards: [
+bc('Autel', '/_blob/79b80f9080642fc3dc6b71c6fa1f9afe', 'Diagnose, ADAS, TPMS, EV-diagnose og ladere.', '369 produkter →', 'autel'),
+bc('JBM', '/_blob/0049c998cc44071cbb0de7c0184a405b', 'Værktøj og værkstedsudstyr.', '122 produkter →', 'jbm'),
+bc('Schumacher', '/_blob/d664b421ea25edc62a68271f244d722a', 'Batteriladere og boostere.', '91 produkter →', 'schumacher'),
+bc('ISOtunes', '/_blob/95865d153a5b96721e367e1057f6cb41', 'Høreværn med Bluetooth.', '41 produkter →', 'isotunes'),
+bc('HubiTools', '', '[KORT BESKRIVELSE]', '18 produkter →', 'hubitools'),
+bc('Govoni', '/_blob/2f56b3cb968c0203dbade5302393da3c', '[KORT BESKRIVELSE]', '14 produkter →', 'govoni'),
+bc('Capelec', '/_blob/058c991e14ae436d83accd2b4415292c', 'Lygteapparater og emissionstest.', '6 produkter →', 'capelec'),
+bc('Beissbarth', '', '[LOGO OG BESKRIVELSE]', 'Se brand →', ''),
+bc('Fastlign', '', '[LOGO OG BESKRIVELSE]', 'Se brand →', '')
+]
+};
+}
+}
+</script>
+</body>
+</html>

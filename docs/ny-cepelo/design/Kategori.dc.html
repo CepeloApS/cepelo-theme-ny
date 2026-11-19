@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO shop – Diagnose og programmering</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400}
+a{color:#000000}a:hover{color:#0868B2}
+.h{font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0;color:#000000}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;box-sizing:border-box}
+.btn-p{background:#0868B2;color:#FFFFFF}.btn-p:hover{background:#173454;color:#FFFFFF}
+.btn-s{background:#FFFFFF;color:#000000;border:1.5px solid #000000}
+@media (max-width:720px){.wrap{padding:0 16px}}
+</style>
+</helmet>
+<div style="width:100%;min-width:0">
+
+<dc-import name="Header" menu="Lukket" hint-size="100%,116px"></dc-import>
+
+<!-- Intro -->
+<section style="background:#F0F0F0;padding:32px 0 40px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:16px">
+<nav aria-label="Brødkrumme" style="font-size:13px"><a href="Main.dc.html">Forside</a> › <a href="Kategorier.dc.html">Shop</a> › Diagnose og programmering</nav>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:12px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+<h1 class="h" style="font-size:44px;line-height:1.05">Diagnose og programmering</h1>
+<p style="margin:0;font-size:17px;line-height:1.6">Diagnosetestere, software, nøglekodning og tilbehør til fejlfinding, kodning og service på alle mærker.</p>
+</div>
+<a href="#" style="display:flex;gap:14px;align-items:center;background:#FFFFFF;border-radius:8px;padding:16px 20px;text-decoration:none;max-width:380px">
+<span style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:600;font-size:14px">Usikker på valget?</span><span style="font-size:13px">Læs om løsningen Autodiagnose →</span></span>
+</a>
+</div>
+<nav aria-label="Underkategorier" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+<sc-for list="{{subs}}" as="s" hint-placeholder-count="8"><a href="{{s.url}}" style="min-height:40px;display:flex;align-items:center;padding:0 14px;background:#FFFFFF;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none">{{s.name}}</a></sc-for>
+</nav>
+</div>
+</section>
+
+<!-- Filtre og produkter -->
+<section style="padding:40px 0 72px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+<aside aria-label="Filtre" style="flex:1 1 220px;max-width:260px;display:flex;flex-direction:column;gap:12px">
+<fieldset style="border:0;margin:0;background:#F0F0F0;border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:8px">
+<legend class="h" style="font-size:13px;float:left;margin-bottom:6px">Type</legend>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px;clear:both"><input type="checkbox" checked style="width:18px;height:18px;accent-color:#0868B2"> Diagnosetestere</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Oscilloskoper</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Software og licenser</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Tilbehør og reservedele</label>
+</fieldset>
+<fieldset style="border:0;margin:0;background:#F0F0F0;border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:8px">
+<legend class="h" style="font-size:13px;float:left;margin-bottom:6px">Kan bruges til</legend>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px;clear:both"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Elbil og hybrid</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Lastbil og bus</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> ADAS-kalibrering</label>
+</fieldset>
+<fieldset style="border:0;margin:0;background:#F0F0F0;border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:8px">
+<legend class="h" style="font-size:13px;float:left;margin-bottom:6px">Lager og brand</legend>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px;clear:both"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> På lager</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> Autel</label>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px;min-height:32px"><input type="checkbox" style="width:18px;height:18px;accent-color:#0868B2"> CEPELO</label>
+</fieldset>
+</aside>
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
+<span style="font-size:14px">[ANTAL] produkter · Priser ekskl. moms</span>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px">Sortér <select style="height:44px;border:1px solid #D8D8D8;border-radius:6px;padding:0 12px;font:inherit;font-size:14px;color:#000000;background:#FFFFFF"><option>Mest relevante</option><option>Nyeste</option><option>Pris, lav til høj</option></select></label>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:16px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="8">
+<div style="position:relative;display:flex;flex-direction:column;gap:8px;background:#F0F0F0;border-radius:8px;padding:18px">
+<sc-if value="{{p.isNew}}" hint-placeholder-val="{{false}}"><span style="position:absolute;top:12px;left:12px;background:#0868B2;color:#FFFFFF;font-size:11px;font-weight:600;text-transform:uppercase;border-radius:4px;padding:4px 8px">Nyhed</span></sc-if>
+<a href="Produkt.dc.html" style="display:block;background:#FFFFFF;border-radius:6px"><img src="{{p.img}}" alt="{{p.name}}" style="width:100%;height:170px;object-fit:contain"></a>
+<span style="font-size:12px">Autel · {{p.sku}}</span>
+<a href="Produkt.dc.html" class="h" style="font-size:14px;line-height:1.3;text-decoration:none">{{p.name}}</a>
+<span style="font-size:13px">{{p.stock}}</span>
+<span class="h" style="font-size:18px;margin-top:auto">{{p.price}}</span>
+<sc-if value="{{p.buy}}" hint-placeholder-val="{{true}}"><button type="button" class="btn btn-p" style="border:0;cursor:pointer;width:100%">Læg i kurv</button></sc-if>
+<sc-if value="{{p.login}}" hint-placeholder-val="{{false}}"><a href="#" class="btn btn-s" style="width:100%">Log ind for pris</a></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SEO-tekst og FAQ -->
+<section style="padding:64px 0;background:#F0F0F0">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<h2 class="h" style="font-size:24px;line-height:1.2">Sådan vælger du den rigtige diagnosetester</h2>
+<p style="margin:0;font-size:15px;line-height:1.7">[SEO-TEKST: 200–300 ord fra SEO Engine. Forklarer forskellen på testerne, hvem de passer til, SGW/SERMI og software­abonnement – med links til de relevante produkter og til løsningen Autodiagnose.]</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<h2 class="h" style="font-size:24px;line-height:1.2">Spørgsmål om diagnosetestere</h2>
+<details style="background:#FFFFFF;border-radius:8px;padding:16px 20px"><summary class="h" style="font-size:14px;cursor:pointer">Hvad koster softwareopdatering?</summary><p style="margin:10px 0 0;font-size:15px;line-height:1.6">Fra 2.995 kr. pr. år for MX900TS til 14.790 kr. for MS Ultra inkl. SGW-pakke (ekskl. moms). Se alle priser på <a href="Support.dc.html">supportsiden</a>.</p></details>
+<details style="background:#FFFFFF;border-radius:8px;padding:16px 20px"><summary class="h" style="font-size:14px;cursor:pointer">Hvad er Secure Gateway (SGW)?</summary><p style="margin:10px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FAQ-METAFELT]</p></details>
+<details style="background:#FFFFFF;border-radius:8px;padding:16px 20px"><summary class="h" style="font-size:14px;cursor:pointer">Kan jeg prøve testeren først?</summary><p style="margin:10px 0 0;font-size:15px;line-height:1.6">Ja. Book en demo i showroomet i Aalborg eller Kolding.</p></details>
+</div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3200}}'>
+class Component extends DCLogic {
+renderVals() {
+const C = 'https://cepelo.dk/collections/';
+const s = (name, h) => ({ name: name, url: C + h });
+const raw = [
+{ name: 'Autel MaxiSys Ultra S2', sku: 'AUT100003827', stock: 'Få på lager', price: 'Forhandlerpris', login: true, isNew: true, img: '/_blob/358ac8bd61ec81f4210a6a365f37c5f8' },
+{ name: 'Autel MaxiSys 919S2', sku: 'AUT100003959', stock: 'Snart på lager', price: 'Forhandlerpris', login: true, isNew: false, img: '/_blob/66580f43e692b28d958c550507aeb4d9' },
+{ name: 'Autel MaxiSys 909S2', sku: 'AUT100003960', stock: 'Få på lager', price: 'Forhandlerpris', login: true, isNew: false, img: '/_blob/d71f07094f3ab55c9463d2b46ad21e1d' },
+{ name: 'Autel EVDiag Box 2', sku: 'AUT900014646', stock: 'På lager', price: '19.995 kr.', login: false, isNew: true, img: '/_blob/887c57c10d49f4fb0e10b8b9da8cb5a4' },
+{ name: 'Autel MaxiScope MP608', sku: 'AUT100005645', stock: 'Snart på lager', price: '5.295 kr.', login: false, isNew: true, img: '/_blob/edfa0b3d0af79d82c3f3b3442b88e892' },
+{ name: 'Autel MD909Pro', sku: 'AUT100003990', stock: 'Få på lager', price: '3.196 kr.', login: false, isNew: true, img: '/_blob/74b48bd6897ef22473a5090bae9b8d29' },
+{ name: 'Autel SOH Blitz Test 12 mdr.', sku: 'AUT900013119', stock: 'Få på lager', price: '3.795 kr.', login: false, isNew: false, img: '/_blob/8dc0a148adc528946f9836da1c75edbf' },
+{ name: 'Autel IA1000 Full Kit Digital Targets', sku: 'AUT900012670', stock: 'Meget få på lager', price: 'Forhandlerpris', login: true, isNew: true, img: '/_blob/73eae71196c615abbf2e4c7f03651275' }
+];
+return {
+subs: [s('Autotestere', 'autotestere'), s('Software og licenser', 'software'), s('Tilbehør', 'tilbehor-til-autodiagnose'), s('Reservedele', 'reservedele-til-autodiagnose'), s('Nøgletestere', 'nogletestere-1'), s('Bilnøgler', 'nogleskaering-1'), s('Nøgleskærere', 'nogleskaerer'), s('Lastbil og bus', 'udstyr-til-lastbiler-og-busser')],
+products: raw.map((p) => Object.assign({}, p, { buy: !p.login }))
+};
+}
+}
+</script>
+</body>
+</html>
