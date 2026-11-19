@@ -1,0 +1,13 @@
+<div class="section">
+  <div class="page-width stack">
+    <h1>{{ page.title | escape }}</h1>
+    <div class="rte">{{ page.content }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_page.name",
+  "tag": "section"
+}
+{% endschema %}

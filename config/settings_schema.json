@@ -1,0 +1,10 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "CEPELO",
+    "theme_version": "0.1.0",
+    "theme_author": "CEPELO A/S",
+    "theme_documentation_url": "https://github.com/CepeloApS/cepelo-theme-ny",
+    "theme_support_url": "https://cepelo.dk"
+  }
+]

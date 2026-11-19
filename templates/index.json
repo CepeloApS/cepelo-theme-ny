@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "home-mission",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

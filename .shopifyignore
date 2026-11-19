@@ -1,0 +1,6 @@
+# Filer, der ikke skal synkroniseres til Shopify
+docs/**
+README.md
+CLAUDE.md
+.github/**
+.theme-check.yml

@@ -1,0 +1,30 @@
+{%- comment -%}
+  Midlertidig section for sidetyper, der bygges i senere punkter i byggerækkefølgen.
+  Viser sidens titel som H1, så hver side har præcis én H1.
+{%- endcomment -%}
+{%- liquid
+  assign heading = page_title
+  case template.name
+    when 'product'
+      assign heading = product.title
+    when 'collection'
+      assign heading = collection.title
+    when 'article'
+      assign heading = article.title
+    when 'blog'
+      assign heading = blog.title
+  endcase
+-%}
+<div class="section">
+  <div class="page-width stack">
+    <h1>{{ heading | escape }}</h1>
+    <p>{{ 'general.placeholder.under_construction' | t }}</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.placeholder.name",
+  "tag": "section"
+}
+{% endschema %}

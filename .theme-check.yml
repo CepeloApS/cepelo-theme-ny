@@ -1,0 +1,5 @@
+# Theme Check – kører lokalt (shopify theme check) og i GitHub Actions på hver PR.
+extends: theme-check:recommended
+ignore:
+  - docs/**
+  - node_modules/**
