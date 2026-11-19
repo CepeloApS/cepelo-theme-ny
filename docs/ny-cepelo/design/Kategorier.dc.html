@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO shop – alle produktkategorier</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400}
+a{color:#000000}a:hover{color:#0868B2}
+.h{font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0;color:#000000}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;color:#000000;background:#FFFFFF;border-radius:4px;padding:3px 8px}
+.logo{filter:grayscale(1);opacity:.75}a:hover .logo{filter:none;opacity:1}
+@media (max-width:720px){.wrap{padding:0 16px}}
+</style>
+</helmet>
+<div style="width:100%;min-width:0">
+
+<dc-import name="Header" menu="Lukket" hint-size="100%,116px"></dc-import>
+
+<!-- Intro -->
+<section style="background:#F0F0F0;padding:32px 0 48px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:16px">
+<nav aria-label="Brødkrumme" style="font-size:13px"><a href="Main.dc.html">Forside</a> › Shop</nav>
+<h1 class="h" style="font-size:46px;line-height:1.05;margin-top:12px">Alle produktkategorier</h1>
+<p style="margin:0;font-size:17px;line-height:1.6;max-width:760px">Udstyret er sorteret efter de opgaver, værkstedet løser. Under hver gruppe finder I også guiden til løsningen.</p>
+<nav aria-label="Spring til" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+<a href="#losninger" style="min-height:44px;display:flex;align-items:center;padding:0 16px;background:#FFFFFF;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none">Udstyr til løsningerne</a>
+<a href="#vaerksted" style="min-height:44px;display:flex;align-items:center;padding:0 16px;background:#FFFFFF;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none">Værkstedet</a>
+<a href="#proshop" style="min-height:44px;display:flex;align-items:center;padding:0 16px;background:#FFFFFF;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none">Pro-shop</a>
+<a href="#brands" style="min-height:44px;display:flex;align-items:center;padding:0 16px;background:#FFFFFF;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none">Brands</a>
+</nav>
+</div>
+</section>
+
+<!-- Udstyr til løsningerne -->
+<section id="losninger" style="padding:64px 0;background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+<h2 class="h" style="font-size:30px;line-height:1.1">Udstyr til løsningerne</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:16px">
+<sc-for list="{{solutionGroups}}" as="g" hint-placeholder-count="5">
+<div style="display:flex;gap:18px;background:#F0F0F0;border-radius:8px;padding:18px;align-items:stretch">
+<a href="{{g.url}}" style="flex:0 0 140px;display:block;background:#FFFFFF;border-radius:6px;overflow:hidden"><img src="{{g.img}}" alt="{{g.name}}" style="width:140px;height:100%;min-height:160px;object-fit:contain"></a>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+<a href="{{g.url}}" class="h" style="font-size:16px;line-height:1.25;text-decoration:none">{{g.name}}</a>
+<span style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:14px">
+<sc-for list="{{g.subs}}" as="s" hint-placeholder-count="4"><a href="{{s.url}}">{{s.name}}</a></sc-for>
+</span>
+<a href="{{g.solutionUrl}}" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;min-height:32px"><span class="tag">Løsning</span>Læs om {{g.solution}} →</a>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Værkstedet -->
+<section id="vaerksted" style="padding:64px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+<h2 class="h" style="font-size:30px;line-height:1.1">Udstyr til den daglige drift</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:16px">
+<sc-for list="{{workshopGroups}}" as="g" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:8px;padding:18px">
+<a href="{{g.url}}" style="display:block;background:#F0F0F0;border-radius:6px"><img src="{{g.img}}" alt="{{g.name}}" style="width:100%;height:180px;object-fit:contain;mix-blend-mode:multiply"></a>
+<a href="{{g.url}}" class="h" style="font-size:16px;text-decoration:none">{{g.name}}</a>
+<span style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:14px">
+<sc-for list="{{g.subs}}" as="s" hint-placeholder-count="4"><a href="{{s.url}}">{{s.name}}</a></sc-for>
+</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Pro-shop -->
+<section id="proshop" style="padding:64px 0;background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:760px">
+<h2 class="h" style="font-size:30px;line-height:1.1">Pro-shop: til mekanikeren, kontoret og bilen</h2>
+<p style="margin:0;font-size:16px;line-height:1.6">Zmartgear, ISOtunes og meget mere. Køb direkte med pris og kurv.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:16px">
+<sc-for list="{{proshop}}" as="p" hint-placeholder-count="9">
+<a href="{{p.url}}" style="display:flex;flex-direction:column;gap:10px;text-decoration:none">
+<span style="display:block;background:#F0F0F0;border-radius:8px"><img src="{{p.img}}" alt="" style="width:100%;height:160px;object-fit:contain;mix-blend-mode:multiply"></span>
+<span class="h" style="font-size:13px;text-align:center">{{p.name}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Brands -->
+<section id="brands" style="padding:56px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:26px;line-height:1.1">Shop efter brand</h2>
+<a href="https://cepelo.dk/pages/alle-brands" style="font-weight:600;font-size:15px">Alle brands →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px">
+<sc-for list="{{brands}}" as="b" hint-placeholder-count="7">
+<a href="{{b.url}}" aria-label="{{b.name}}" style="display:flex;align-items:center;justify-content:center;height:88px;background:#FFFFFF;border-radius:8px;overflow:hidden"><img src="{{b.logo}}" alt="{{b.name}}" class="logo" style="width:130px;height:130px;object-fit:contain"></a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- SEO-tekst -->
+<section style="padding:64px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<h2 class="h" style="font-size:24px;line-height:1.2">Værkstedsudstyr til professionelle værksteder</h2>
+<p style="margin:0;font-size:15px;line-height:1.7">CEPELO A/S leverer diagnoseudstyr, ADAS og hjuludmåling, A/C-maskiner, udstyr til elbiler og opladning samt lifte og værktøj til professionelle værksteder i Danmark og Norge. [SEO-TEKST: 150–250 ord, skrevet af SEO Engine, med links til de seks løsninger og de vigtigste kategorier]</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<h2 class="h" style="font-size:24px;line-height:1.2">Spørgsmål om shoppen</h2>
+<details style="background:#F0F0F0;border-radius:8px;padding:16px 20px"><summary class="h" style="font-size:14px;cursor:pointer">Hvem kan købe i shoppen?</summary><p style="margin:10px 0 0;font-size:15px;line-height:1.6">Professionelle værksteder og forhandlere. Forhandlere ser nettopris efter login.</p></details>
+<details style="background:#F0F0F0;border-radius:8px;padding:16px 20px"><summary class="h" style="font-size:14px;cursor:pointer">Kan udstyret leases?</summary><p style="margin:10px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FÆLLES LEASINGFELT]</p></details>
+</div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3600}}'>
+class Component extends DCLogic {
+renderVals() {
+const C = 'https://cepelo.dk/collections/';
+const s = (name, h) => ({ name: name, url: C + h });
+return {
+solutionGroups: [
+{ name: 'Diagnose og programmering', solution: 'autodiagnose', solutionUrl: '#', url: C + 'autodiagnose-10', img: '/_blob/b706fcf6c300b03d25582c55e9493b2c', subs: [s('Autotestere', 'autotestere'), s('Software', 'software'), s('Tilbehør', 'tilbehor-til-autodiagnose'), s('Nøgletestere', 'nogletestere-1'), s('Bilnøgler', 'nogleskaering-1'), s('Nøgleskærere', 'nogleskaerer'), s('Lastbil og bus', 'udstyr-til-lastbiler-og-busser')] },
+{ name: 'ADAS og hjuludmåling', solution: 'ADAS og hjuludmåling', solutionUrl: '#', url: C + 'adas-og-hjuludmaling-2', img: '/_blob/b294fbdd14a0f1285adbb336ca1d904a', subs: [s('Tavler', 'tavler'), s('Radar', 'radar'), s('Tilbehør', 'tilbehor-til-adas-og-hjuludmaling'), s('Reservedele', 'reservedele-til-ia-serien'), s('Køretøjsinspektion', 'koretojs-inspektion')] },
+{ name: 'Elbil: service og reparation', solution: 'elbilservice', solutionUrl: 'Losning.dc.html', url: C + 'vaerktoj-til-elbiler', img: '/_blob/8cfefb71866d8fbee2d400f61a6c95a9', subs: [s('Batterireparation', 'batterireparation'), s('Sikkerhedsgodkendt værktøj', 'sikkerhedsgodkendt-vaerktoj'), s('Batterilifte', 'batterilifte'), s('SOH-test', 'soh-udvalgte')] },
+{ name: 'Opladning', solution: 'opladning', solutionUrl: '#', url: C + 'ev-udstyr-7', img: '/_blob/7b08ed287a5e3fd6b142c0dd784702d3', subs: [s('Bærbare ladere', 'baerbare-ladere-til-elbil'), s('AC-ladere', 'lader-til-elbiler'), s('DC-ladere', 'dc-lader-til-elbil'), s('Ladekabler', 'ladekabler-til-elbiler'), s('Tilbehør', 'tilbehor-til-elbiler-og-ladere')] },
+{ name: 'A/C-service', solution: 'A/C-service', solutionUrl: '#', url: C + 'aircondition-maskiner', img: '/_blob/f57054b47f7fe4acd50a4d78316fe9c3', subs: [s('A/C-maskiner', 'aircondition-maskiner')] }
+],
+workshopGroups: [
+{ name: 'Batteri og start', url: C + 'batteriladere-og-boostere-1', img: '/_blob/a0f1da6d865a53b0c24590a0b08ac2b2', subs: [s('Batteriladere', 'batteriladere'), s('Boostere', 'boostere'), s('Invertere', 'invertere'), s('Batteritestere', 'batteritestere')] },
+{ name: 'Dæk og TPMS', url: C + 'tpms-og-daekudstyr', img: '/_blob/a909ca2fab4e78cb440cfe7ce4b9163f', subs: [s('TPMS-værktøj', 'tpms-vaerktoj'), s('Sensorer', 'tpms-sensorer'), s('Reservedele', 'reservedele-til-tpms'), s('Dækudstyr', 'daekudstyr')] },
+{ name: 'Lifte og løfteudstyr', url: C + 'lifte', img: '/_blob/b8d84c41147a17d485b568a0f02adcd6', subs: [s('Autolifte', 'autolifte'), s('Batterilifte', 'batterilifte'), s('Donkrafte', 'donkrafte'), s('Løftebukke', 'loftebukke')] },
+{ name: 'Værkstedsudstyr og værktøj', url: C + 'diverse-vaerkstedsudstyr', img: '/_blob/d360697a2426626239be26e9d930ec04', subs: [s('Specialmaskiner', 'specialmaskiner'), s('Lygteapparater', 'lygteapparater'), s('Emissionstest', 'emissionstest'), s('Specialværktøj', 'specialvaerktoj'), s('Elværktøj', 'elvaerktoj'), s('Lim og tape', 'lim-og-tape-1'), s('Lys og lygter', 'lys-og-lygter-2')] }
+],
+proshop: [
+{ name: 'Høreværn', url: C + 'horevaern-4', img: '/_blob/bbb86ca0701f0c43ea18b301415efe64' },
+{ name: 'Personlige værnemidler', url: C + 'personlige-vaernemidler', img: '/_blob/78b07fe478699710ada5739b2dd6bf28' },
+{ name: 'Kommunikation', url: C + 'kommunikation', img: '/_blob/a626eed12ae43235af9e40ecf2d2286e' },
+{ name: 'Mobiludstyr', url: C + 'mobiludstyr-4', img: '/_blob/93c5dd96c7ecce2cb2c4a72e35f62c39' },
+{ name: 'GPS-tracking', url: C + 'gps-tracking-3', img: '/_blob/d74028735f901120e62b587898bdc3a5' },
+{ name: 'Nødstrøm', url: C + 'nodstrom-1', img: '/_blob/eda2243b5f4f7d8a12daecd771c224a1' },
+{ name: 'Videoovervågning', url: C + 'videoovervagning-3', img: '/_blob/1b2f9bd4dc2b20cf4f894ac973b11150' },
+{ name: 'Biludstyr', url: C + 'condition-1-value-biludstyr', img: '/_blob/524689fe589c36e42312ef087a4a77ef' },
+{ name: 'Løbehjul', url: C + 'lobehjul', img: '/_blob/2214549947062ac76543d5ab80a3f3bf' }
+],
+brands: [
+{ name: 'Autel', logo: '/_blob/79b80f9080642fc3dc6b71c6fa1f9afe', url: C + 'autel' },
+{ name: 'Zmartgear', logo: '/_blob/af34aa7d8cc706e0e59ba43620f1f921', url: C + 'zmartgear' },
+{ name: 'JBM', logo: '/_blob/0049c998cc44071cbb0de7c0184a405b', url: C + 'jbm' },
+{ name: 'Schumacher', logo: '/_blob/d664b421ea25edc62a68271f244d722a', url: C + 'schumacher' },
+{ name: 'ISOtunes', logo: '/_blob/95865d153a5b96721e367e1057f6cb41', url: C + 'isotunes' },
+{ name: 'Govoni', logo: '/_blob/2f56b3cb968c0203dbade5302393da3c', url: C + 'govoni' },
+{ name: 'Capelec', logo: '/_blob/058c991e14ae436d83accd2b4415292c', url: C + 'capelec' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

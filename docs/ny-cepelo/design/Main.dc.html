@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO – forside</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400}
+a{color:#000000}a:hover{color:#0868B2}
+.h{font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0;color:#000000}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;box-sizing:border-box}
+.btn-p{background:#0868B2;color:#FFFFFF}.btn-p:hover{background:#173454;color:#FFFFFF}
+.btn-s{background:#FFFFFF;color:#000000;border:1.5px solid #000000}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:#000000;background:#F0F0F0;border-radius:4px;padding:4px 10px}
+.logo{filter:grayscale(1);opacity:.75}a:hover .logo{filter:none;opacity:1}
+@media (max-width:720px){.wrap{padding:0 16px}}
+</style>
+</helmet>
+<div style="width:100%;min-width:0">
+
+<dc-import name="Header" menu="{{menu}}" hint-size="100%,116px"></dc-import>
+
+<!-- Seks løsninger -->
+<section id="losninger" style="position:relative;overflow:hidden;padding:80px 0">
+<img src="/_blob/1b671291ec47c5936f9df8d23bb14f1a" alt="" aria-hidden="true" style="position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);object-fit:cover;object-position:center 30%;filter:blur(6px)">
+<div aria-hidden="true" style="position:absolute;inset:0;background:#FFFFFF;opacity:.84"></div>
+<div class="wrap" style="position:relative;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:720px">
+<h1 class="h" style="font-size:40px;line-height:1.08">Vi sikrer fremtidens værksted</h1>
+<p style="margin:0;font-size:18px;line-height:1.6">Vælg ud fra opgaven, ikke produktet. Hver løsning samler udstyr, uddannelse, finansiering og support ét sted.</p>
+</div>
+<a href="Viden.dc.html" style="font-weight:600;font-size:15px">Se alle løsninger →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px">
+<sc-for list="{{solutions}}" as="s" hint-placeholder-count="6">
+<a href="{{s.url}}" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border-radius:8px;padding:20px 20px 20px 24px;text-decoration:none;color:#000000;min-height:150px;box-sizing:border-box;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+<span style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span class="h" style="font-size:19px">{{s.name}}</span></span>
+<span style="font-size:15px;line-height:1.6">{{s.text}}</span>
+</span>
+<img src="{{s.img}}" alt="" style="flex:0 0 104px;width:104px;height:104px;object-fit:contain;background:#F0F0F0;border-radius:6px">
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Trust -->
+<section style="background:#F0F0F0">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;padding-top:32px;padding-bottom:32px">
+<div style="display:flex;gap:14px;align-items:flex-start"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M7 4h18v14l-9 10-9-10zM11 14l4 4 7-7"></path></svg><div><p class="h" style="font-size:14px">CARA-certificeret SOH</p><p style="margin:4px 0 0;font-size:14px">Godkendt af Car Remarketing Association Europe</p></div></div>
+<div style="display:flex;gap:14px;align-items:flex-start"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M4 14 16 5l12 9v14H4zM12 28v-8h8v8"></path></svg><div><p class="h" style="font-size:14px">To showrooms</p><p style="margin:4px 0 0;font-size:14px">Se og prøv udstyret i Aalborg og Kolding</p></div></div>
+<div style="display:flex;gap:14px;align-items:flex-start"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M2 12 16 6l14 6-14 6zM8 15v7c3 3 13 3 16 0v-7M28 13v8"></path></svg><div><p class="h" style="font-size:14px">CEPELO Academy</p><p style="margin:4px 0 0;font-size:14px">Kurser i diagnose, HV-sikkerhed og ADAS</p></div></div>
+<div style="display:flex;gap:14px;align-items:flex-start"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M7 4h5l2 7-3 2a17 17 0 0 0 8 8l2-3 7 2v5a3 3 0 0 1-3 3A24 24 0 0 1 4 7a3 3 0 0 1 3-3z"></path></svg><div><p class="h" style="font-size:14px">Dansk support</p><p style="margin:4px 0 0;font-size:14px">Teknisk support og Remote Expert</p></div></div>
+</div>
+</section>
+
+<!-- Anmeldelser -->
+<section style="padding:80px 0;background:#FFFFFF">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Det siger værkstederne</h2>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+<span aria-hidden="true" style="display:flex;gap:2px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="#0868B2"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#0868B2"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#0868B2"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#0868B2"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#0868B2"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"></path></svg>
+</span>
+<span style="font-size:16px"><strong style="font-weight:600">[X,X] ud af 5</strong> · baseret på [ANTAL] anmeldelser på [Google / Trustpilot]</span>
+</div>
+</div>
+<a href="#" style="font-weight:600;font-size:15px">Læs alle anmeldelser →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px">
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+<figure style="margin:0;display:flex;flex-direction:column;gap:14px;background:#F0F0F0;border-radius:8px;padding:28px">
+<span style="font-size:14px;font-weight:600">★★★★★</span>
+<blockquote style="margin:0;font-size:16px;line-height:1.6">{{r.quote}}</blockquote>
+<figcaption style="font-size:14px"><strong style="font-weight:600">{{r.name}}</strong><br>{{r.company}}</figcaption>
+</figure>
+</sc-for>
+</div>
+<p style="margin:0;font-size:13px">Anmeldelserne hentes automatisk fra [Google / Trustpilot] og vises med kilde og dato.</p>
+</div>
+</section>
+
+<!-- Kundehistorier -->
+<section style="padding:80px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Værksteder, der allerede arbejder sådan</h2>
+<a href="https://cepelo.dk/blogs/kundehistorier" style="font-weight:600;font-size:15px">Alle kundehistorier →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:20px">
+<a href="https://cepelo.dk/blogs/kundehistorier" style="grid-row:span 2;display:flex;flex-direction:column;background:#FFFFFF;border-radius:8px;overflow:hidden;text-decoration:none;color:#000000">
+<img src="/_blob/a30ae9a1c11ac9c910d6d5b2895e9022" alt="PPilgaard Auto og Lakcenter" style="width:100%;height:340px;object-fit:cover">
+<span style="display:flex;flex-direction:column;gap:12px;padding:28px">
+<span class="tag" style="align-self:flex-start">Autodiagnose</span>
+<span class="h" style="font-size:24px;line-height:1.2">Sådan øger PPilgaard Auto &amp; Lakcenter effektiviteten</span>
+<span style="font-size:16px;line-height:1.6">[KORT RESUMÉ: udfordring, løsning og resultat i 2–3 sætninger]</span>
+<span style="font-weight:600;font-size:15px">Læs historien →</span>
+</span>
+</a>
+<sc-for list="{{stories}}" as="s" hint-placeholder-count="2">
+<a href="https://cepelo.dk/blogs/kundehistorier" style="display:flex;gap:20px;background:#FFFFFF;border-radius:8px;overflow:hidden;text-decoration:none;color:#000000">
+<img src="{{s.img}}" alt="{{s.alt}}" style="flex:0 0 180px;width:180px;min-height:180px;object-fit:cover">
+<span style="display:flex;flex-direction:column;gap:10px;padding:20px 20px 20px 0">
+<span class="tag" style="align-self:flex-start">{{s.tag}}</span>
+<span class="h" style="font-size:16px;line-height:1.3">{{s.title}}</span>
+<span style="font-size:13px">{{s.date}}</span>
+</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Kampagne -->
+<section style="padding:80px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
+<div style="position:relative;background:#F0F0F0;border-radius:8px;padding:32px">
+<span style="position:absolute;top:20px;left:20px;background:#0868B2;color:#FFFFFF;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;border-radius:4px;padding:6px 12px">Kampagne</span>
+<img src="/_blob/1fdc85ba3f41bd44427a1833dd070075" alt="Autel IA1000 ADAS- og hjulindstillingssystem med MaxiSys MS909S2" style="width:100%;height:420px;object-fit:contain">
+</div>
+<div style="display:flex;flex-direction:column;gap:18px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Kampagne: IA1000 inkl. MaxiSys MS909S2</h2>
+<p style="margin:0;font-size:17px;line-height:1.6">Pakketilbud med Autel IA1000 – automatisk ADAS- og hjulindstillingssystem – og diagnosetesteren MaxiSys MS909S2. Kalibrering og sporing i én arbejdsgang, med rapport til kunden.</p>
+<ul style="margin:0;padding:0 0 0 20px;font-size:15px;line-height:1.8">
+<li>Inkl. SGW-adgang i [X] år</li>
+<li>Installation og oplæring af [X] teknikere</li>
+<li>Gælder til [DATO]</li>
+</ul>
+<p style="margin:0"><span class="h" style="font-size:30px">[KAMPAGNEPRIS]</span> <span style="font-size:14px">ekskl. moms · leasing fra [X] kr./md.</span></p>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a href="Produkt.dc.html" class="btn btn-p">Se kampagnen</a><a href="#demo" class="btn btn-s">Book demo</a></div>
+</div>
+</div>
+</section>
+
+<!-- Nyheder -->
+<section style="padding:80px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Nyt i sortimentet</h2>
+<a href="Kategorier.dc.html" style="font-weight:600;font-size:15px">Se alle nyheder →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="4">
+<a href="Produkt.dc.html" style="position:relative;display:flex;flex-direction:column;gap:8px;background:#FFFFFF;border-radius:8px;padding:20px;text-decoration:none;color:#000000">
+<span style="position:absolute;top:14px;left:14px;background:#0868B2;color:#FFFFFF;font-size:11px;font-weight:600;text-transform:uppercase;border-radius:4px;padding:4px 8px">Nyhed</span>
+<img src="{{p.img}}" alt="{{p.name}}" style="width:100%;height:180px;object-fit:contain">
+<span style="font-size:12px">{{p.brand}} · Varenr. {{p.sku}}</span>
+<span class="h" style="font-size:15px;line-height:1.3">{{p.name}}</span>
+<span style="font-size:13px">{{p.stock}}</span>
+<span class="h" style="font-size:19px;margin-top:auto">{{p.price}}</span>
+<span style="font-size:12px">{{p.priceNote}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- SOH -->
+<section style="padding:80px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:18px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Dokumentér batteriets tilstand med en CARA-certificeret SOH-test</h2>
+<p style="margin:0;font-size:17px;line-height:1.6">Autel-systemet overvåger spænding, strøm, temperatur og opladningseffektivitet under hele opladningen og laver en rapport med en valid SOH-værdi. Rapporterne er CARA Approved.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a href="https://cepelo.dk/pages/soh-batteritilstand" class="btn btn-p">Sådan virker SOH-testen</a><a href="Losning.dc.html" class="btn btn-s">Alt til elbiler</a></div>
+</div>
+<img src="/_blob/84a75540a1cf0a3ef31746e49aa1ef4b" alt="Tekniker aflæser SOH-rapport på Autel-tablet i en elbil" style="width:100%;height:440px;object-fit:cover;border-radius:8px">
+</div>
+</section>
+
+<!-- Brands -->
+<section style="padding:64px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:28px;line-height:1.1">Brands vi leverer og supporterer</h2>
+<a href="https://cepelo.dk/pages/alle-brands" style="font-weight:600;font-size:15px">Alle brands →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px">
+<sc-for list="{{brands}}" as="b" hint-placeholder-count="7">
+<a href="{{b.url}}" aria-label="{{b.name}}" style="display:flex;align-items:center;justify-content:center;height:96px;background:#FFFFFF;border-radius:8px;overflow:hidden"><img src="{{b.logo}}" alt="{{b.name}}" class="logo" style="width:140px;height:140px;object-fit:contain"></a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Afkast -->
+<section id="afkast" style="padding:80px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:18px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Hvad tjener udstyret hjem?</h2>
+<p style="margin:0;font-size:17px;line-height:1.6">Indtast antal biler og jeres pris pr. ydelse. I får et overslag over tilbagebetalingstid og månedlig leasingydelse – og vi sender et tilbud, hvis I ønsker det.</p>
+<p style="margin:0;font-size:14px;line-height:1.5">Eksempel: SOH-test giver 312 % ROI på første år.¹<br>¹ Kilde: [INDSÆT KILDE OG FORUDSÆTNINGER]</p>
+</div>
+<form style="background:#F0F0F0;border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:18px" aria-label="Afkastberegner">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="l" style="font-size:13px;font-weight:600">Løsning</label><select id="l" style="height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;background:#FFFFFF"><option>SOH-batteritest</option><option>ADAS og hjuludmåling</option><option>A/C-service</option></select></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b" style="font-size:13px;font-weight:600">Biler pr. uge</label><input id="b" value="12" style="height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;box-sizing:border-box"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="pr" style="font-size:13px;font-weight:600">Pris pr. ydelse (kr.)</label><input id="pr" value="[DIN PRIS]" style="height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;box-sizing:border-box"></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;background:#FFFFFF;border-radius:6px;padding:20px">
+<div><p style="margin:0;font-size:13px">Tilbagebetalt efter</p><p class="h" style="font-size:24px;margin-top:4px">[X] mdr.</p></div>
+<div><p style="margin:0;font-size:13px">Leasing fra</p><p class="h" style="font-size:24px;margin-top:4px">[X] kr./md.</p></div>
+</div>
+<button type="button" class="btn btn-p" style="border:0;cursor:pointer">Få beregningen tilsendt</button>
+</form>
+</div>
+</section>
+
+<!-- Viden -->
+<section style="padding:80px 0;background:#F0F0F0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Guides og nyheder til værkstedet</h2>
+<a href="Viden.dc.html" style="font-weight:600;font-size:15px">Gå til Viden →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px">
+<sc-for list="{{articles}}" as="a" hint-placeholder-count="3">
+<a href="#" style="display:flex;flex-direction:column;background:#FFFFFF;border-radius:8px;overflow:hidden;text-decoration:none;color:#000000">
+<img src="{{a.img}}" alt="" style="width:100%;height:190px;object-fit:cover">
+<span style="display:flex;flex-direction:column;gap:10px;padding:24px;flex:1">
+<span class="tag" style="align-self:flex-start">{{a.tag}}</span>
+<span class="h" style="font-size:17px;line-height:1.3">{{a.title}}</span>
+<span style="font-size:14px;line-height:1.55">{{a.lead}}</span>
+<span style="margin-top:auto;font-size:13px">{{a.date}}</span>
+</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Showroom -->
+<section id="demo" style="padding:80px 0;background:#FFFFFF">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px">
+<img src="/_blob/1b671291ec47c5936f9df8d23bb14f1a" alt="Showroom med A/C-maskine og ADAS-udstyr" style="width:100%;height:100%;min-height:380px;object-fit:cover;border-radius:8px">
+<div style="display:flex;flex-direction:column;gap:16px;justify-content:center;padding:8px 8px 8px 16px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Se udstyret, før I køber</h2>
+<p style="margin:0;font-size:16px;line-height:1.6">Book en demo i et af vores showrooms. En specialist gennemgår udstyret på jeres biler og jeres arbejdsgange.</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<div style="background:#F0F0F0;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:8px"><p class="h" style="font-size:18px">Aalborg</p><p style="margin:0;font-size:14px;line-height:1.6">Nibevej 54<br>9200 Aalborg SV<br>[ÅBNINGSTIDER]</p></div>
+<div style="background:#F0F0F0;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:8px"><p class="h" style="font-size:18px">Kolding</p><p style="margin:0;font-size:14px;line-height:1.6">[ADRESSE]<br>[POSTNR.] Kolding<br>[ÅBNINGSTIDER]</p></div>
+</div>
+<a href="https://cepelo.dk/pages/showroom" class="btn btn-p" style="align-self:flex-start">Book demo</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:80px 0;background:#F0F0F0">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px">
+<h2 class="h" style="font-size:34px;line-height:1.1">Det spørger værkstederne om</h2>
+<div style="display:flex;flex-direction:column;gap:10px">
+<details open="" style="background:#FFFFFF;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Sælger CEPELO til private?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">Nej. Vi sælger til professionelle værksteder og forhandlere. Vejledende priser er synlige for alle; forhandlere ser deres nettopris efter login.</p></details>
+<details style="background:#FFFFFF;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Kan udstyret leases?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FÆLLES LEASINGFELT I SHOPIFY]</p></details>
+<details style="background:#FFFFFF;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Hvad koster en SOH-rapport?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">[SVAR FRA FÆLLES SOH-PRISFELT I SHOPIFY]</p></details>
+<details style="background:#FFFFFF;border-radius:8px;padding:18px 22px"><summary class="h" style="font-size:15px;cursor:pointer">Tilbyder I oplæring?</summary><p style="margin:12px 0 0;font-size:15px;line-height:1.6">Ja. CEPELO Academy holder kurser i brug af Autel-testere, og flere kurser er på vej.</p></details>
+</div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"menu":{"editor":"enum","options":["Lukket","Løsninger og viden","Shop","Brands"],"default":"Lukket","section":"Mega-menu"},"$preview":{"width":1440,"height":7400}}'>
+class Component extends DCLogic {
+renderVals() {
+const C = 'https://cepelo.dk/collections/';
+return {
+menu: this.props.menu ?? 'Lukket',
+solutions: [
+{ name: 'Elbil: service og reparation', text: 'HV-måling, batterireparation og sikkerhedsgodkendt værktøj til arbejde på højvoltsbiler.', url: 'Losning.dc.html', img: '/_blob/887c57c10d49f4fb0e10b8b9da8cb5a4' },
+{ name: 'SOH-batteritest', text: 'CARA-certificeret dokumentation af batteriets tilstand ved salg, indbytte og service.', url: 'https://cepelo.dk/pages/soh-batteritilstand', img: '/_blob/8dc0a148adc528946f9836da1c75edbf' },
+{ name: 'ADAS og hjuludmåling', text: 'Kalibrering af kameraer og radar samt hjuludmåling efter producentens krav.', url: '#', img: '/_blob/73eae71196c615abbf2e4c7f03651275' },
+{ name: 'Autodiagnose', text: 'Diagnosetestere, oscilloskoper og software til fejlfinding, kodning og service.', url: '#', img: '/_blob/358ac8bd61ec81f4210a6a365f37c5f8' },
+{ name: 'A/C-service', text: 'A/C-maskiner til R1234yf og R134a, lækagesøgning og tilbehør.', url: '#', img: '/_blob/f57054b47f7fe4acd50a4d78316fe9c3' },
+{ name: 'Opladning', text: 'AC- og DC-ladere, mobile ladere på hjul og ladekabler til daglig drift.', url: '#', img: '/_blob/c87423c0ab5ff237cc21ad6b7c5fa856' }
+],
+reviews: [
+{ quote: '[Citat fra rigtig anmeldelse – hentes fra Google/Trustpilot]', name: '[Navn]', company: '[Værksted, by]' },
+{ quote: '[Citat fra rigtig anmeldelse – hentes fra Google/Trustpilot]', name: '[Navn]', company: '[Værksted, by]' },
+{ quote: '[Citat fra rigtig anmeldelse – hentes fra Google/Trustpilot]', name: '[Navn]', company: '[Værksted, by]' }
+],
+stories: [
+{ tag: 'Autodiagnose', date: '22. maj 2026', title: 'Bedre dokumentation og stærkere kundetillid med Autel hos Kvalitetsbiler', img: '/_blob/05fdfc6bc0b0fb11fdebdc921d088820', alt: 'Kvalitetsbiler' },
+{ tag: '[LØSNING]', date: '[DATO]', title: '[TITEL] – kundehistorie fra Galten Auto', img: '/_blob/842bdf571b8843c09779b9c1f93b6139', alt: 'Galten Auto' }
+],
+products: [
+{ name: 'Autel MaxiScope MP608', brand: 'Autel', sku: 'AUT100005645', stock: 'Snart på lager', price: '5.295 kr.', priceNote: 'Ekskl. moms', img: '/_blob/edfa0b3d0af79d82c3f3b3442b88e892' },
+{ name: 'Autel MaxiSys Ultra S2', brand: 'Autel', sku: 'AUT100003827', stock: 'Få på lager', price: 'Log ind for pris', priceNote: 'Forhandlerpris', img: '/_blob/358ac8bd61ec81f4210a6a365f37c5f8' },
+{ name: 'Autel MD909Pro', brand: 'Autel', sku: 'AUT100003990', stock: 'Få på lager', price: '3.196 kr.', priceNote: 'Ekskl. moms', img: '/_blob/74b48bd6897ef22473a5090bae9b8d29' },
+{ name: 'Autel IA1000 Full Kit Digital Targets', brand: 'Autel', sku: 'AUT900012670', stock: 'Meget få på lager', price: 'Log ind for pris', priceNote: 'Forhandlerpris', img: '/_blob/73eae71196c615abbf2e4c7f03651275' }
+],
+brands: [
+{ name: 'Autel', logo: '/_blob/79b80f9080642fc3dc6b71c6fa1f9afe', url: C + 'autel' },
+{ name: 'Zmartgear', logo: '/_blob/af34aa7d8cc706e0e59ba43620f1f921', url: C + 'zmartgear' },
+{ name: 'JBM', logo: '/_blob/0049c998cc44071cbb0de7c0184a405b', url: C + 'jbm' },
+{ name: 'ISOtunes', logo: '/_blob/95865d153a5b96721e367e1057f6cb41', url: C + 'isotunes' },
+{ name: 'Capelec', logo: '/_blob/058c991e14ae436d83accd2b4415292c', url: C + 'capelec' },
+{ name: 'Govoni', logo: '/_blob/2f56b3cb968c0203dbade5302393da3c', url: C + 'govoni' },
+{ name: 'Schumacher', logo: '/_blob/d664b421ea25edc62a68271f244d722a', url: C + 'schumacher' }
+],
+articles: [
+{ tag: 'Elbil: service og reparation', title: 'Fremtidens biler kræver nye kompetencer, nyt udstyr og nye services', lead: 'Er værkstederne klar til næste teknologiske skifte?', date: '15. juni 2026', img: '/_blob/994c8ee7644b58df21dc40dcf92bc258' },
+{ tag: 'Autodiagnose', title: 'Derfor er Autel testere et smart valg til dit værksted', lead: 'Hvad en god diagnosetester betyder for den daglige drift.', date: '22. maj 2026', img: '/_blob/936e945c3a43fac8ffa2d8bc3867e170' },
+{ tag: 'Autodiagnose', title: 'SERMI og Dig-ID: adgangen til bilens data', lead: 'Hvad EU-ordningen betyder for jeres adgang til sikkerhedsrelaterede funktioner.', date: '21. april 2026', img: '/_blob/29c6d34b806c97c3ed23cb9585253375' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

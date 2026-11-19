@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO mobil – løsninger og viden</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400}
+a{color:#000000}
+.h{font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0;color:#000000}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:6px;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;box-sizing:border-box}
+.btn-p{background:#0868B2;color:#FFFFFF}
+.btn-s{background:#FFFFFF;color:#000000;border:1.5px solid #000000}
+</style>
+</helmet>
+<div style="width:390px;height:2700px;overflow:hidden;position:relative;background:#FFFFFF;display:flex;flex-direction:column">
+
+<header style="background:#FFFFFF;padding:10px 16px 12px;display:flex;flex-direction:column;gap:10px;box-shadow:0 1px 0 #D8D8D8">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<a href="MobilForside.dc.html" aria-label="CEPELO forside" style="display:flex"><img src="/_blob/feb2d38c5dd471249c4b042062fc0ad1" alt="CEPELO" style="height:30px;width:auto"></a>
+<div style="display:flex;gap:2px">
+<button type="button" aria-label="Kurv" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M3 4h2l2.4 11h11l2-8H6.2M8 19h2v2H8zM16 19h2v2h-2z"></path></svg></button>
+<button type="button" aria-label="Menu" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.3" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+</div>
+</div>
+<nav aria-label="Hovedmenu" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:#F0F0F0;border-radius:6px;padding:4px">
+<a href="MobilViden.dc.html" aria-current="page" class="h" style="font-size:11px;color:#FFFFFF;background:#0868B2;text-decoration:none;min-height:40px;display:flex;align-items:center;justify-content:center;border-radius:4px">Løsninger og viden</a>
+<a href="Kategorier.dc.html" class="h" style="font-size:11px;color:#000000;text-decoration:none;min-height:40px;display:flex;align-items:center;justify-content:center;border-radius:4px">Shop</a>
+</nav>
+</header>
+
+<section style="background:#F0F0F0;padding:24px 16px;display:flex;flex-direction:column;gap:12px">
+<h1 class="h" style="font-size:28px;line-height:1.05">Løsninger og viden</h1>
+<form role="search" style="display:flex">
+<label for="mvs" style="position:absolute;left:-9999px">Søg i viden</label>
+<input id="mvs" type="search" placeholder="Søg i guides, manualer og varenr." style="flex:1;height:50px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;background:#FFFFFF;box-sizing:border-box">
+</form>
+<div role="tablist" aria-label="Indholdstype" style="display:flex;gap:8px;overflow-x:auto;margin-right:-16px;padding-right:16px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="6">
+<sc-if value="{{t.on}}" hint-placeholder-val="{{false}}"><button type="button" role="tab" aria-selected="true" onClick="{{t.pick}}" style="flex:0 0 auto;min-height:44px;padding:0 14px;border-radius:6px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:#0868B2;color:#FFFFFF;border:0;white-space:nowrap">{{t.label}}</button></sc-if>
+<sc-if value="{{t.off}}" hint-placeholder-val="{{true}}"><button type="button" role="tab" aria-selected="false" onClick="{{t.pick}}" style="flex:0 0 auto;min-height:44px;padding:0 14px;border-radius:6px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:#FFFFFF;color:#000000;border:0;white-space:nowrap">{{t.label}}</button></sc-if>
+</sc-for>
+</div>
+</section>
+
+<section style="padding:24px 16px;background:#FFFFFF;display:flex;flex-direction:column;gap:8px">
+<h2 class="h" style="font-size:20px;line-height:1.1;margin-bottom:4px">Vælg løsning</h2>
+<sc-for list="{{solutions}}" as="s" hint-placeholder-count="6">
+<a href="{{s.href}}" style="display:flex;gap:12px;align-items:center;background:#F0F0F0;border-radius:8px;padding:12px;text-decoration:none">
+<img src="{{s.img}}" alt="" style="flex:0 0 56px;width:56px;height:56px;object-fit:contain;background:#FFFFFF;border-radius:4px">
+<span style="display:flex;flex-direction:column;gap:4px"><span class="h" style="font-size:13px;line-height:1.25">{{s.name}}</span><span style="font-size:13px;line-height:1.45">{{s.answer}}</span></span>
+</a>
+</sc-for>
+</section>
+
+<section style="padding:24px 16px;background:#F0F0F0;display:flex;flex-direction:column;gap:8px">
+<h2 class="h" style="font-size:20px;line-height:1.1;margin-bottom:4px">Seneste guides</h2>
+<sc-for list="{{articles}}" as="a" hint-placeholder-count="3">
+<a href="#" style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;border-radius:8px;padding:14px;text-decoration:none">
+<span style="font-size:12px;font-weight:600">{{a.type}} · {{a.tag}}</span>
+<span class="h" style="font-size:13px;line-height:1.3">{{a.title}}</span>
+<span style="font-size:12px">{{a.date}}</span>
+</a>
+</sc-for>
+<a href="https://cepelo.dk/blogs/inspiration" style="font-weight:600;font-size:14px;min-height:44px;display:flex;align-items:center">Se alle guides →</a>
+</section>
+
+<section style="padding:24px 16px;background:#FFFFFF;display:flex;flex-direction:column;gap:10px">
+<h2 class="h" style="font-size:20px;line-height:1.1">Support</h2>
+<div style="background:#F0F0F0;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px">
+<label for="mmn" class="h" style="font-size:12px">Find manual</label>
+<input id="mmn" placeholder="Varenummer, fx AUT900014646" style="height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;background:#FFFFFF;box-sizing:border-box">
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+<a href="https://2g40x1.share-eu1.hsforms.com/2p4xiss_rQeyTUtboXwS1zA" class="btn btn-s">Opret sag</a>
+<a href="tel:+4598180203" class="btn btn-p">Ring support</a>
+</div>
+</section>
+
+<section style="padding:24px 16px;background:#F0F0F0;display:flex;flex-direction:column;gap:10px">
+<h2 class="h" style="font-size:20px;line-height:1.1">CEPELO Academy</h2>
+<p style="margin:0;font-size:14px;line-height:1.55">To-dages kursus: Lær at bruge din Autel-tester korrekt. AMU-kursus hos Tradium i Randers.</p>
+<a href="Academy.dc.html" class="btn btn-p" style="align-self:flex-start">Se kurser</a>
+</section>
+
+<footer style="background:#F0F0F0;font-size:13px;padding:8px 16px 32px;display:flex;flex-direction:column;gap:10px">
+<img src="/_blob/feb2d38c5dd471249c4b042062fc0ad1" alt="CEPELO" style="width:120px;height:36px;object-fit:contain;object-position:left center">
+<span style="line-height:1.7">CEPELO A/S · Nibevej 54, 9200 Aalborg SV<br>CVR DK35818332 · 98 18 09 00 · info@cepelo.dk</span>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2700}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { tab: 'Alle' }; }
+renderVals() {
+const labels = ['Alle', 'Guides', 'Manualer', 'Support', 'Kurser', 'Kundehistorier'];
+return {
+tabs: labels.map((l) => { const on = this.state.tab === l; return { label: l, on: on, off: !on, pick: () => this.setState({ tab: l }) }; }),
+solutions: [
+{ name: 'Elbil: service og reparation', answer: 'Sikker HV-måling og batterireparation.', href: 'Losning.dc.html', img: '/_blob/8cfefb71866d8fbee2d400f61a6c95a9' },
+{ name: 'SOH-batteritest', answer: 'CARA-certificeret rapport.', href: '#', img: '/_blob/8dc0a148adc528946f9836da1c75edbf' },
+{ name: 'ADAS og hjuludmåling', answer: 'Kalibrering efter producentens krav.', href: '#', img: '/_blob/b294fbdd14a0f1285adbb336ca1d904a' },
+{ name: 'Autodiagnose', answer: 'Fejlfinding, kodning og SERMI.', href: '#', img: '/_blob/b706fcf6c300b03d25582c55e9493b2c' },
+{ name: 'A/C-service', answer: 'R1234yf- og R134a-anlæg.', href: '#', img: '/_blob/f57054b47f7fe4acd50a4d78316fe9c3' },
+{ name: 'Opladning', answer: 'AC- og DC-ladere.', href: '#', img: '/_blob/7b08ed287a5e3fd6b142c0dd784702d3' }
+],
+articles: [
+{ type: 'Nyhed', tag: 'Elbil', title: 'EVDiag Box 2: tre HV-værktøjer i ét apparat', date: '9. oktober 2026' },
+{ type: 'Guide', tag: 'Autodiagnose', title: 'SERMI og Dig-ID: adgangen til bilens data', date: '21. april 2026' },
+{ type: 'Guide', tag: 'Opladning', title: 'Professionel DC-opladning til værksteder og erhverv', date: '16. februar 2026' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

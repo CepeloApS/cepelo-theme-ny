@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>CEPELO – fælles footer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<footer style="width:100%;background:#F0F0F0;color:#000000;font-family:'Open Sans',Arial,sans-serif;font-weight:400;font-size:14px">
+
+<!-- Nyhedsbrev -->
+<div style="max-width:1280px;margin:0 auto;padding:48px 32px 0;box-sizing:border-box">
+<form aria-label="Tilmeld nyhedsbrev" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;background:#FFFFFF;border-radius:8px;padding:24px 28px">
+<div style="flex:1 1 360px;display:flex;flex-direction:column;gap:4px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:18px">Nyt til værkstedet – én gang om måneden</span>
+<span style="font-size:14px">Nye produkter, guides, kurser og kampagner.</span>
+</div>
+<label for="nl" style="position:absolute;left:-9999px">E-mail</label>
+<input id="nl" type="email" placeholder="navn@værksted.dk" style="flex:0 1 300px;height:48px;border:1px solid #D8D8D8;border-radius:6px;padding:0 14px;font:inherit;font-size:15px;color:#000000;box-sizing:border-box">
+<button type="button" style="min-height:48px;padding:0 22px;border:0;border-radius:6px;background:#0868B2;color:#FFFFFF;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;cursor:pointer">Tilmeld</button>
+</form>
+</div>
+
+<!-- Kolonner -->
+<div style="max-width:1280px;margin:0 auto;padding:48px 32px 32px;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<img src="/_blob/feb2d38c5dd471249c4b042062fc0ad1" alt="CEPELO" style="width:150px;height:44px;object-fit:contain;object-position:left center">
+<p style="margin:0;line-height:1.7">CEPELO A/S<br>Nibevej 54<br>9200 Aalborg SV<br>CVR DK35818332</p>
+<p style="margin:0;line-height:1.7">Salg: <a href="tel:+4598180900" style="color:#000000">98 18 09 00</a><br>Support: <a href="tel:+4598180203" style="color:#000000">98 18 02 03</a><br><a href="mailto:info@cepelo.dk" style="color:#000000">info@cepelo.dk</a></p>
+</div>
+<nav aria-label="Løsninger" style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;margin-bottom:4px">Løsninger</span>
+<sc-for list="{{solutions}}" as="l" hint-placeholder-count="6"><a href="{{l.url}}" style="color:#000000;text-decoration:none">{{l.name}}</a></sc-for>
+</nav>
+<nav aria-label="Shop" style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;margin-bottom:4px">Shop</span>
+<sc-for list="{{shop}}" as="l" hint-placeholder-count="10"><a href="{{l.url}}" style="color:#000000;text-decoration:none">{{l.name}}</a></sc-for>
+</nav>
+<nav aria-label="Viden og service" style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;margin-bottom:4px">Viden og service</span>
+<sc-for list="{{service}}" as="l" hint-placeholder-count="8"><a href="{{l.url}}" style="color:#000000;text-decoration:none">{{l.name}}</a></sc-for>
+</nav>
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Montserrat',Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;margin-bottom:4px">Showrooms</span>
+<span style="font-weight:600">Aalborg</span>
+<span style="line-height:1.6">Nibevej 54, 9200 Aalborg SV<br>[ÅBNINGSTIDER]</span>
+<span style="font-weight:600;margin-top:8px">Kolding</span>
+<span style="line-height:1.6">[ADRESSE], Kolding<br>[ÅBNINGSTIDER]</span>
+<a href="https://cepelo.dk/pages/showroom" style="color:#000000;font-weight:600;margin-top:8px">Book demo →</a>
+</div>
+</div>
+
+<!-- Bund -->
+<div style="max-width:1280px;margin:0 auto;padding:0 32px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px">
+<span>© 2026 CEPELO A/S · CEPELO Norway AS</span>
+<span style="display:flex;flex-wrap:wrap;gap:6px 18px">
+<a href="https://cepelo.dk/pages/om-cepelo" style="color:#000000">Om CEPELO</a>
+<a href="https://cepelo.dk/pages/karriere" style="color:#000000">Karriere</a>
+<a href="https://cepelo.dk/policies/terms-of-service" style="color:#000000">Handelsbetingelser</a>
+<a href="https://cepelo.dk/policies/privacy-policy" style="color:#000000">Privatlivs- og cookiepolitik</a>
+<a href="https://www.linkedin.com/company/cepelo/" style="color:#000000">LinkedIn</a>
+<a href="https://www.youtube.com/@cepeloas4532" style="color:#000000">YouTube</a>
+<a href="https://www.facebook.com/cepelotools/" style="color:#000000">Facebook</a>
+</span>
+</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":640}}'>
+class Component extends DCLogic {
+renderVals() {
+const C = 'https://cepelo.dk/collections/';
+return {
+solutions: [
+{ name: 'Elbil: service og reparation', url: 'Losning.dc.html' },
+{ name: 'SOH-batteritest', url: 'https://cepelo.dk/pages/soh-batteritilstand' },
+{ name: 'ADAS og hjuludmåling', url: '#' },
+{ name: 'Autodiagnose', url: '#' },
+{ name: 'A/C-service', url: '#' },
+{ name: 'Opladning', url: '#' }
+],
+shop: [
+{ name: 'Diagnose og programmering', url: C + 'autodiagnose-10' },
+{ name: 'ADAS og hjuludmåling', url: C + 'adas-og-hjuludmaling-2' },
+{ name: 'Elbil: service og reparation', url: C + 'vaerktoj-til-elbiler' },
+{ name: 'Opladning', url: C + 'ev-udstyr-7' },
+{ name: 'A/C-service', url: C + 'aircondition-maskiner' },
+{ name: 'Batteri og start', url: C + 'batteriladere-og-boostere-1' },
+{ name: 'Dæk og TPMS', url: C + 'tpms-og-daekudstyr' },
+{ name: 'Lifte og løfteudstyr', url: C + 'lifte' },
+{ name: 'Værkstedsudstyr og værktøj', url: C + 'diverse-vaerkstedsudstyr' },
+{ name: 'Pro-shop', url: 'Kategorier.dc.html#proshop' }
+],
+service: [
+{ name: 'Guides og vejledninger', url: 'https://cepelo.dk/blogs/support' },
+{ name: 'Support', url: 'Support.dc.html' },
+{ name: 'Reklamation', url: 'https://cepelo.dk/pages/reklamation' },
+{ name: 'CEPELO Academy', url: 'Academy.dc.html' },
+{ name: 'Kundehistorier', url: 'https://cepelo.dk/blogs/kundehistorier' },
+{ name: 'Inspiration og nyheder', url: 'https://cepelo.dk/blogs/inspiration' },
+{ name: 'Fullservice leasing', url: 'https://cepelo.dk/pages/fullservice-leasing' },
+{ name: 'Alle brands', url: 'https://cepelo.dk/pages/alle-brands' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

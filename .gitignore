@@ -1,0 +1,10 @@
+# Hemmeligheder — må aldrig i repoet
+.env*
+
+# Værktøjer
+node_modules/
+.shopify/
+
+# Styresystem
+.DS_Store
+Thumbs.db
